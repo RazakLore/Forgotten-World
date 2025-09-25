@@ -20341,6 +20341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775172827}
   - component: {fileID: 775172826}
+  - component: {fileID: 775172828}
   m_Layer: 0
   m_Name: Lorensway Trigger
   m_TagString: Untagged
@@ -20409,6 +20410,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &775172828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775172825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a226e2390c3e26b4c838ec1f31f61985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaConnector
+  doorID: OW_2
+  targetID: LW_1
+  targetScene: Lorensway_Exterior
 --- !u!1 &817998020
 GameObject:
   m_ObjectHideFlags: 0
@@ -20466,6 +20482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1037234021}
   - component: {fileID: 1037234020}
+  - component: {fileID: 1037234022}
   m_Layer: 0
   m_Name: The Cellstower Trigger
   m_TagString: Untagged
@@ -20534,6 +20551,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037234022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037234019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a226e2390c3e26b4c838ec1f31f61985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaConnector
+  doorID: OW_4
+  targetID: CT_1
+  targetScene: Cellstower
 --- !u!1 &1046344336
 GameObject:
   m_ObjectHideFlags: 0
@@ -20544,6 +20576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046344338}
   - component: {fileID: 1046344337}
+  - component: {fileID: 1046344339}
   m_Layer: 0
   m_Name: Nexus Shrine Trigger
   m_TagString: Untagged
@@ -20612,6 +20645,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1046344339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046344336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a226e2390c3e26b4c838ec1f31f61985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaConnector
+  doorID: OW_3
+  targetID: NS_1
+  targetScene: NexusShrine
 --- !u!1 &1170328029
 GameObject:
   m_ObjectHideFlags: 0

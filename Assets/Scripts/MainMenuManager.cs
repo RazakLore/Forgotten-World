@@ -1,0 +1,37 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MainMenuManager : MonoBehaviour
+{
+    [Header("Scene Names")]
+    public string firstSceneName = "Overworld"; // Scene to load on New Game
+
+    public void NewGame()
+    {
+        // For now, just load the first scene
+        SceneManager.LoadScene(firstSceneName);
+    }
+
+    public void LoadGame()
+    {
+        // Placeholder: in future, hook into save system
+        Debug.Log("Load Game clicked (not implemented yet).");
+    }
+
+    public void Options()
+    {
+        // Placeholder: later we can show options UI
+        Debug.Log("Options clicked (not implemented yet).");
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit clicked.");
+        Application.Quit();
+
+        // Note: Quit only works in builds, not in the Unity editor
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+}
