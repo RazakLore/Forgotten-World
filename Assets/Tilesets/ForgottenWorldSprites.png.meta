@@ -422,7 +422,7 @@ TextureImporter:
       name: ForgottenWorldSprites_13
       rect:
         serializedVersion: 2
-        x: 208
+        x: 96
         y: 224
         width: 16
         height: 16
@@ -444,7 +444,7 @@ TextureImporter:
       name: ForgottenWorldSprites_14
       rect:
         serializedVersion: 2
-        x: 224
+        x: 208
         y: 224
         width: 16
         height: 16
@@ -466,7 +466,7 @@ TextureImporter:
       name: ForgottenWorldSprites_15
       rect:
         serializedVersion: 2
-        x: 240
+        x: 224
         y: 224
         width: 16
         height: 16
@@ -488,8 +488,8 @@ TextureImporter:
       name: ForgottenWorldSprites_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 208
+        x: 240
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -510,7 +510,7 @@ TextureImporter:
       name: ForgottenWorldSprites_17
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 208
         width: 16
         height: 16
@@ -532,7 +532,7 @@ TextureImporter:
       name: ForgottenWorldSprites_18
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 208
         width: 16
         height: 16
@@ -554,7 +554,7 @@ TextureImporter:
       name: ForgottenWorldSprites_19
       rect:
         serializedVersion: 2
-        x: 48
+        x: 32
         y: 208
         width: 16
         height: 16
@@ -576,7 +576,7 @@ TextureImporter:
       name: ForgottenWorldSprites_20
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 208
         width: 16
         height: 16
@@ -598,8 +598,8 @@ TextureImporter:
       name: ForgottenWorldSprites_21
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 64
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -620,8 +620,8 @@ TextureImporter:
       name: ForgottenWorldSprites_22
       rect:
         serializedVersion: 2
-        x: 16
-        y: 192
+        x: 176
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -642,8 +642,8 @@ TextureImporter:
       name: ForgottenWorldSprites_23
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
+        x: 192
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -664,8 +664,8 @@ TextureImporter:
       name: ForgottenWorldSprites_24
       rect:
         serializedVersion: 2
-        x: 48
-        y: 192
+        x: 208
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -686,8 +686,8 @@ TextureImporter:
       name: ForgottenWorldSprites_25
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 224
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -708,8 +708,8 @@ TextureImporter:
       name: ForgottenWorldSprites_26
       rect:
         serializedVersion: 2
-        x: 80
-        y: 192
+        x: 240
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -730,8 +730,8 @@ TextureImporter:
       name: ForgottenWorldSprites_27
       rect:
         serializedVersion: 2
-        x: 16
-        y: 176
+        x: 0
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -752,8 +752,8 @@ TextureImporter:
       name: ForgottenWorldSprites_28
       rect:
         serializedVersion: 2
-        x: 64
-        y: 176
+        x: 16
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -774,8 +774,8 @@ TextureImporter:
       name: ForgottenWorldSprites_29
       rect:
         serializedVersion: 2
-        x: 80
-        y: 176
+        x: 32
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -796,8 +796,8 @@ TextureImporter:
       name: ForgottenWorldSprites_30
       rect:
         serializedVersion: 2
-        x: 64
-        y: 112
+        x: 48
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -818,8 +818,8 @@ TextureImporter:
       name: ForgottenWorldSprites_31
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
+        x: 64
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -840,8 +840,8 @@ TextureImporter:
       name: ForgottenWorldSprites_32
       rect:
         serializedVersion: 2
-        x: 16
-        y: 96
+        x: 80
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -862,8 +862,8 @@ TextureImporter:
       name: ForgottenWorldSprites_33
       rect:
         serializedVersion: 2
-        x: 32
-        y: 96
+        x: 160
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -884,8 +884,8 @@ TextureImporter:
       name: ForgottenWorldSprites_34
       rect:
         serializedVersion: 2
-        x: 48
-        y: 96
+        x: 176
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -906,8 +906,8 @@ TextureImporter:
       name: ForgottenWorldSprites_35
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
+        x: 192
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -928,8 +928,8 @@ TextureImporter:
       name: ForgottenWorldSprites_36
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 208
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -950,8 +950,8 @@ TextureImporter:
       name: ForgottenWorldSprites_37
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
+        x: 224
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -972,6 +972,534 @@ TextureImporter:
       name: ForgottenWorldSprites_38
       rect:
         serializedVersion: 2
+        x: 240
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f533d1c79b6309488111d9ac895f163
+      internalID: -170016042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_39
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f09e32d8fc0a3468f351315c9f232d
+      internalID: -877162100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef79949965997540889c548d45de27e
+      internalID: 45524182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_41
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a631d95fc90f4841b83bf6b1ab74ec3
+      internalID: 1433340407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_42
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495c4c7185b50a0438bb1bbae3cafaa9
+      internalID: -1625732722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_43
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c725501010bf094b8477934de92c347
+      internalID: 7578506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b1f4cb4c8bc1f4f8db57519d1cb425
+      internalID: 1701502737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada759d045890c840938f37aac3e0252
+      internalID: -1440013509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b602a494ef1eb438b8e43c3c373d75
+      internalID: 980800807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c12df15215b5c47ba44bcfa43965ac
+      internalID: -1340899943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_48
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbba83ef27648334ebb8689a2e4f85a1
+      internalID: 1621590027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_49
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51ae4c5ba09dfe4f81fdefe8ef63089
+      internalID: -765712274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bef8c79c57d0b740bdab54bd4e9df78
+      internalID: -1897873658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f9c5ca9e58d0784cb2a0755795f9817
+      internalID: 55684207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_52
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6d941d838c41743864a4afc6180517
+      internalID: 905303317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_53
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fddb573fea4274e9400272edc5f778
+      internalID: -861570187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_54
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea07dda218826ec4983d9fc799d2ba4e
+      internalID: 693844711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_55
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917c3934015eb444b8b07321862578f7
+      internalID: 359511430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_56
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a4fe6be8a69d34cae529aa3ce9fe99
+      internalID: 1012776753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_57
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55453aefca7a3e442a68cb67820c6718
+      internalID: -910493289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_58
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d113bc4a951094f8599235e2fdc72f
+      internalID: -1617135258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2067b179bcbcd6045b2fbc4ba14e26fb
+      internalID: 1692142738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0364105cd302d44a94851af73a0c42
+      internalID: 1323237998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_61
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bb22f09863bb64d9fb24cdfcabc56d
+      internalID: 499421945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_62
+      rect:
+        serializedVersion: 2
         x: 32
         y: 48
         width: 16
@@ -984,14 +1512,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c259c3f4085decc4c8004dce6d50df6d
-      internalID: -170016042
+      spriteID: df2566d6df7272d429a0abafffb378b9
+      internalID: 1422184433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_39
+      name: ForgottenWorldSprites_63
       rect:
         serializedVersion: 2
         x: 48
@@ -1006,14 +1534,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f22970117e9544e923f33a731a482a
-      internalID: -877162100
+      spriteID: 1b8e0a87315e74d42ad28ce227708733
+      internalID: 1083115478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_40
+      name: ForgottenWorldSprites_64
       rect:
         serializedVersion: 2
         x: 64
@@ -1028,14 +1556,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 094346bc5d85e8a479795f5080954ffb
-      internalID: 45524182
+      spriteID: 501d17da931d1704f9fafd5260724f73
+      internalID: -1831438371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_41
+      name: ForgottenWorldSprites_65
       rect:
         serializedVersion: 2
         x: 80
@@ -1050,14 +1578,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c3d2623ae439994c9cc9da10a2209e6
-      internalID: 1433340407
+      spriteID: 0357bdb1129c8f8449b068b217d440ba
+      internalID: -220158844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_42
+      name: ForgottenWorldSprites_66
       rect:
         serializedVersion: 2
         x: 96
@@ -1072,14 +1600,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa000c961f23724293a4cf22b6ddcb0
-      internalID: -1625732722
+      spriteID: dc407556e1799b94b8ab25f2cdfc596e
+      internalID: -575652260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_43
+      name: ForgottenWorldSprites_67
       rect:
         serializedVersion: 2
         x: 112
@@ -1094,14 +1622,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d531f83c0c6a6644a57b971fa78309b
-      internalID: 7578506
+      spriteID: fbfab7ecefdcf6944a050a8f83ad49bb
+      internalID: 1764559953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_44
+      name: ForgottenWorldSprites_68
       rect:
         serializedVersion: 2
         x: 128
@@ -1116,14 +1644,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43b02877311c7844186411463d2fd861
-      internalID: 1701502737
+      spriteID: 91bc8a65f23de3c4ebc8daa3dece3edc
+      internalID: -590758335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_45
+      name: ForgottenWorldSprites_69
       rect:
         serializedVersion: 2
         x: 144
@@ -1138,14 +1666,146 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dbf436b18096b745b066e5ebeff09e4
-      internalID: -1440013509
+      spriteID: e51212f438cd9d242ab148201a0bf7c7
+      internalID: -208219546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_46
+      name: ForgottenWorldSprites_70
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aba864f5a4a2ae4092f12c921c3f114
+      internalID: 601772865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_71
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964bccb74e9bc094a80ba133bbfcff83
+      internalID: -974577360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_72
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b701a7b45db8db418179a2ac707f41c
+      internalID: -799189371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_73
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf8d6688274a144dad94fc351296d6e
+      internalID: 985042765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_74
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0305a890964f01042aa95454aecf76c3
+      internalID: 1680552273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_75
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4972538eb29614fb9d8eb6d6e6ef83
+      internalID: 1512037785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_76
       rect:
         serializedVersion: 2
         x: 0
@@ -1160,14 +1820,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e548c5b6b25d11f4bbd2ecc2da265e6c
-      internalID: 980800807
+      spriteID: a89f89856f3086e4d994c2b4aad38f7f
+      internalID: 754359439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_47
+      name: ForgottenWorldSprites_77
       rect:
         serializedVersion: 2
         x: 16
@@ -1182,14 +1842,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5954d321f052ac498feb4b13453dfba
-      internalID: -1340899943
+      spriteID: badb4d0b7c1bdab4db919f43e438c477
+      internalID: -589343937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_48
+      name: ForgottenWorldSprites_78
       rect:
         serializedVersion: 2
         x: 32
@@ -1204,14 +1864,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b47217d9a6d9dfa44a3f84cfa81e996a
-      internalID: 1621590027
+      spriteID: 9429c95832c980c4080963a10e4af927
+      internalID: 223386342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_49
+      name: ForgottenWorldSprites_79
       rect:
         serializedVersion: 2
         x: 48
@@ -1226,14 +1886,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63b7208225f60ce47afb70e817a991f9
-      internalID: -765712274
+      spriteID: d451f0a0abce91c419d1c50c0f159acc
+      internalID: -1471783266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_50
+      name: ForgottenWorldSprites_80
       rect:
         serializedVersion: 2
         x: 64
@@ -1248,14 +1908,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529af71e4ded37344869812e7378cdc4
-      internalID: -1897873658
+      spriteID: 657fac60c659ee545abe429abe287626
+      internalID: -1744704760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_51
+      name: ForgottenWorldSprites_81
       rect:
         serializedVersion: 2
         x: 80
@@ -1270,14 +1930,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2afa9e7c6b9ebbf43b0346c6c0f35669
-      internalID: 55684207
+      spriteID: e3aeba03ff0b3a44f800d1949888a0b1
+      internalID: -207329013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_52
+      name: ForgottenWorldSprites_82
       rect:
         serializedVersion: 2
         x: 96
@@ -1292,14 +1952,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f28524b7d30a19a48891224e369b2cb0
-      internalID: 905303317
+      spriteID: efce9d6044581c8498a1d54fb3683584
+      internalID: -1786149716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_53
+      name: ForgottenWorldSprites_83
       rect:
         serializedVersion: 2
         x: 112
@@ -1314,14 +1974,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94de8c8946101224cbe9dad28569f631
-      internalID: -861570187
+      spriteID: 88f5e0052d0e4ed43b0efa241bc448e0
+      internalID: -1637475716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_54
+      name: ForgottenWorldSprites_84
       rect:
         serializedVersion: 2
         x: 128
@@ -1336,14 +1996,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e97379edb5a1c2742b1b6876864f0c89
-      internalID: 693844711
+      spriteID: e5933d600936c7d419ace6469fa3e383
+      internalID: -333326342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ForgottenWorldSprites_55
+      name: ForgottenWorldSprites_85
       rect:
         serializedVersion: 2
         x: 144
@@ -1358,8 +2018,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccca8856cbb3e454a8992fa246c3d630
-      internalID: 359511430
+      spriteID: 651030bd29cad9a40900891017c374d8
+      internalID: -263091667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_86
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b445bd232e6554d8bd01c260a9f770
+      internalID: 595752531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_87
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c067495a1837448ae1ddf0f617b324
+      internalID: 1267944462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_88
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d93e7f5fefb26489ac9e2724808d52
+      internalID: -1639709596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_89
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a913c2d6d59e14468b264c434a67ae1
+      internalID: 566174833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_90
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b1eb1a73e83124dafdc7f58049abd6
+      internalID: -43889658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenWorldSprites_91
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c5d60720f34c224087a092f886546c4
+      internalID: -807341913
       vertices: []
       indices: 
       edges: []
@@ -1378,7 +2170,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: True
     nameFileIdTable:
       ForgottenWorldSprites_0: -3801304285368276820
       ForgottenWorldSprites_1: 8973974316459308862
@@ -1432,10 +2226,46 @@ TextureImporter:
       ForgottenWorldSprites_53: -861570187
       ForgottenWorldSprites_54: 693844711
       ForgottenWorldSprites_55: 359511430
+      ForgottenWorldSprites_56: 1012776753
+      ForgottenWorldSprites_57: -910493289
+      ForgottenWorldSprites_58: -1617135258
+      ForgottenWorldSprites_59: 1692142738
       ForgottenWorldSprites_6: 6852332291056421429
+      ForgottenWorldSprites_60: 1323237998
+      ForgottenWorldSprites_61: 499421945
+      ForgottenWorldSprites_62: 1422184433
+      ForgottenWorldSprites_63: 1083115478
+      ForgottenWorldSprites_64: -1831438371
+      ForgottenWorldSprites_65: -220158844
+      ForgottenWorldSprites_66: -575652260
+      ForgottenWorldSprites_67: 1764559953
+      ForgottenWorldSprites_68: -590758335
+      ForgottenWorldSprites_69: -208219546
       ForgottenWorldSprites_7: -8558724078095311675
+      ForgottenWorldSprites_70: 601772865
+      ForgottenWorldSprites_71: -974577360
+      ForgottenWorldSprites_72: -799189371
+      ForgottenWorldSprites_73: 985042765
+      ForgottenWorldSprites_74: 1680552273
+      ForgottenWorldSprites_75: 1512037785
+      ForgottenWorldSprites_76: 754359439
+      ForgottenWorldSprites_77: -589343937
+      ForgottenWorldSprites_78: 223386342
+      ForgottenWorldSprites_79: -1471783266
       ForgottenWorldSprites_8: -8418728212192493275
+      ForgottenWorldSprites_80: -1744704760
+      ForgottenWorldSprites_81: -207329013
+      ForgottenWorldSprites_82: -1786149716
+      ForgottenWorldSprites_83: -1637475716
+      ForgottenWorldSprites_84: -333326342
+      ForgottenWorldSprites_85: -263091667
+      ForgottenWorldSprites_86: 595752531
+      ForgottenWorldSprites_87: 1267944462
+      ForgottenWorldSprites_88: -1639709596
+      ForgottenWorldSprites_89: 566174833
       ForgottenWorldSprites_9: -3522459290670780251
+      ForgottenWorldSprites_90: -43889658
+      ForgottenWorldSprites_91: -807341913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
