@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject playerPrefab;
 
     [HideInInspector] public GameObject playerInstance;
+    private SaveData pendingSaveData;
+    private string pendingConnectorID; // stores door ID until the scene is loaded
 
     private void Awake()
     {
@@ -34,13 +36,5 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(savedScene);
     }
 
-    public void EnsurePlayerExists()
-    {
-        //Spawn the player for testing purposes, spawn later after the game has been started or loaded etc
-        if (playerInstance == null && playerPrefab != null)
-        {
-            playerInstance = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
-            DontDestroyOnLoad(playerInstance);
-        }
-    }
+    // How can I thread the TargetDoorID through here to be accessed in the next scene?
 }
