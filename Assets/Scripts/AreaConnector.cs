@@ -5,9 +5,11 @@ using System.Collections;
 public class AreaConnector : MonoBehaviour
 {
     [Header("Where does this door go?")]
-    [SerializeField] string doorID;
-    [SerializeField] string targetID;
-    [SerializeField] string targetScene;
+    [SerializeField] private string doorID;
+    [SerializeField] private string targetID;
+    [SerializeField] private string targetScene;
+
+    public string TargetID { get { return targetID; } }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,9 +18,10 @@ public class AreaConnector : MonoBehaviour
             // Send the targetID to the game manager
 
             //SceneManager.MoveGameObjectToScene(collision.gameObject, SceneManager.GetSceneByName(targetScene));
+            GameManager.instance.targetDoorID = targetID;
             StartCoroutine(LoadYourAsyncScene(collision.gameObject));
             //SceneManager.LoadScene(targetScene);
-            collision.gameObject.transform.position = GameObject.Find(targetID + "Spawn").transform.position;
+            //collision.gameObject.transform.position = GameObject.Find(targetID + "Spawn").transform.position;
         }
     }
 
@@ -38,10 +41,20 @@ public class AreaConnector : MonoBehaviour
 
         // Move the GameObject (you attach this in the Inspector) to the newly loaded Scene
         SceneManager.MoveGameObjectToScene(player, SceneManager.GetSceneByName(targetScene));
+
         // Unload the previous Scene
         SceneManager.UnloadSceneAsync(currentScene);
 
         PlayerPrefs.SetString("SCENE_SPAWN_POINT", targetScene);
+
+        // Place the player at the desired spawn point
+        GameObject spawnPoint = GameObject.FindGameObjectWithTag("DoorSpawnPoint");
+
+        if (spawnPoint != null)
+        {
+            player.transform.position = spawnPoint.transform.position;
+        }
+
         //player.transform.position = GameObject.Find(targetID + "Spawn").transform.position; // DOESNT WORK
     }
 }

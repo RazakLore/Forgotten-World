@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public GameObject playerInstance;
     private SaveData pendingSaveData;
     private string pendingConnectorID; // stores door ID until the scene is loaded
+
+    [Header("Transfer Variables")]
+    public string targetDoorID;
 
     private void Awake()
     {
@@ -26,9 +30,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void StartNewGame()
+    public void SpawnPlayerAtSceneStart()
     {
-        SceneManager.LoadScene("StartingScene");
+        if (playerInstance == null)
+        {
+            playerInstance = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+            playerInstance.tag = "Player";
+        }
     }
 
     public void LoadGame(string savedScene)

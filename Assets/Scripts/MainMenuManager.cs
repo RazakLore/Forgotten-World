@@ -10,6 +10,18 @@ public class MainMenuManager : MonoBehaviour
     {
         // For now, just load the first scene
         SceneManager.LoadScene(firstSceneName);
+
+        SceneManager.sceneLoaded += HandleSceneLoaded;
+    }
+
+    private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SceneManager.sceneLoaded -= HandleSceneLoaded;
+
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.SpawnPlayerAtSceneStart();
+        }
     }
 
     public void LoadGame()
