@@ -12,4 +12,6 @@ public class SaveData
     // public int playerHP;
     // public int playerLevel;
     // public List<string> inventoryItems;
+
+    // level up requirement doubles every levelup
 }

@@ -2,13 +2,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 1f;
+    public static PlayerMovement instance;
+    [SerializeField] private float moveSpeed = 1.3f;
     private Rigidbody2D rb;
     private Vector2 movement;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
   
     void Update()
