@@ -215,6 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432152640089061846}
   - component: {fileID: 855951806867782839}
+  - component: {fileID: 4713246586218753819}
   - component: {fileID: 6823334968357029577}
   - component: {fileID: 44342228206083365}
   m_Layer: 0
@@ -254,6 +255,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   moveSpeed: 2
+--- !u!114 &4713246586218753819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7378728723957277128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96d43edf84af6f4faf0e9d0e39588a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomEncounter
 --- !u!50 &6823334968357029577
 Rigidbody2D:
   serializedVersion: 5
