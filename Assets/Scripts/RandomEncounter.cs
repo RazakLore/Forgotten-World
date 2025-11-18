@@ -16,6 +16,8 @@ public class RandomEncounter : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private BattleManager battleManager;
+    //[SerializeField] private GameObject battlePanel;
+    [SerializeField] private GameObject[] enemyPrefabs;
 
     private bool canTrigger = true;
 
@@ -43,12 +45,14 @@ public class RandomEncounter : MonoBehaviour
     private void TriggerEncounter()
     {
         canTrigger = false;
+        
         randomTimer = 0f;
         randomTimerThreshold = Random.Range(randomTimerRangeMin, randomTimerRangeMax);
+        GameObject chosenPrefab = enemyPrefabs[0];
 
         if (battleManager != null )
         {
-            battleManager.StartBattle();
+            battleManager.InstantiateBattle(chosenPrefab);
         }
         else
         {
@@ -61,6 +65,8 @@ public class RandomEncounter : MonoBehaviour
     public void ResumeEncounterDetection()
     {
         canTrigger = true;
-        PlayerMovement.instance.SetCanMove(true);
+        //if (battlePanel.activeInHierarchy)
+        //    battlePanel.SetActive(false);
+        
     }
 }

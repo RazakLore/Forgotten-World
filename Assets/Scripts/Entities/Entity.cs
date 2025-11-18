@@ -12,26 +12,31 @@ public abstract class Entity : MonoBehaviour
     // LEVEL
     // LIST OF ABILITIES
 
-    protected int maxHp;
-    protected int currentHp;
-    protected int maxMp;
-    protected int currentMp;
-    protected int atk;
-    protected int def;
-    protected int agi;          // Agility algorithm in battle will determine who moves first and potentially their evasion as well
-    protected int lvl;          // Track the level of the player and the recommended level for enemies, can tailor stat growth algorithm around this
-    protected int xp;           // For player - add XP, for enemy - value of XP to give to player at end of battle
+    [SerializeField] protected string entityName;
+    [SerializeField] protected int maxHp;
+    [SerializeField] protected int currentHp;
+    [SerializeField] protected int maxMp;
+    [SerializeField] protected int currentMp;
+    [SerializeField] protected int atk;
+    [SerializeField] protected int def;
+    [SerializeField] protected int agi;          // Agility algorithm in battle will determine who moves first and potentially their evasion as well
+    [SerializeField] protected int lvl;          // Track the level of the player and the recommended level for enemies, can tailor stat growth algorithm around this
+    [SerializeField] protected int currentXp;           // For player - add XP, for enemy - value of XP to give to player at end of battle
+    [SerializeField] protected int currentGold;
     protected List<Ability> ABILITIES = new List<Ability>();        // Have a base list for abilities that in the individual enemy class we can add unique abilities to
-    
+
     // Now we need GET SETS for these stats to be used in battle
+    public string ENTNAME => entityName;
     public int MAXHP => maxHp;
     public int HP => currentHp;
     public int MAXMP => maxMp;
     public int MP => currentMp;
     public int ATK => atk;
     public int DEF => def;
+    public int AGI => agi;
     public int LVL => lvl;
-    public int XP => xp;
+    public int XP => currentXp;
+    public int GOLD => currentGold;
 
     // ------------------
 
@@ -77,5 +82,22 @@ public abstract class Entity : MonoBehaviour
     {
         // Figure out which stat is being buffed, figure out if 1 or 2 stages are being buffed (15 or 30%)
         // If already at max stage dont add to the stat but cast the ability.
+    }
+
+    public void InitializeEnemySpawn()
+    {
+        currentHp = maxHp;
+        currentMp = maxMp;
+    }
+
+    public void PlayerGainXPGold(int xpToAdd, int goldToAdd)
+    {
+        currentXp += xpToAdd;
+        currentGold += goldToAdd;
+    }
+
+    public void HalvePlayerGold()
+    {
+        currentGold /= 2;
     }
 }

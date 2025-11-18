@@ -1,15 +1,31 @@
 using UnityEngine;
 
-public class PlayerState : MonoBehaviour
+public class PlayerState : Entity
 {
-    [SerializeField] private int playerHP;
-    [SerializeField] private int currentHP; // This tracks the value of HP from the max of playerHP, tracking damage done to player
-    [SerializeField] private int playerMP;
-    [SerializeField] private int currentMP;
-    [SerializeField] private int playerATK;
-    [SerializeField] private int currentATK; // In the case we want debuffs, this could be a nice value to at least write down first to remember
-    [SerializeField] private int playerAGI;
-    [SerializeField] private int currentAGI;
-    // THESE WILL BE OVERRIDES INSTEAD, INHERIT FROM A BASE ENTITY CLASS FOR BOTH PLAYER AND ALL MONSTERS
-    //
+    public static PlayerState instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        entityName = ENTNAME;
+        maxHp = 15;
+        currentHp = maxHp;
+        maxMp = 0;
+        currentMp = maxMp;
+        atk = 7;
+        agi = 5;
+        lvl = 1;
+        currentXp = 0;
+        currentGold = 0;
+    }
+
 }
