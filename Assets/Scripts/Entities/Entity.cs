@@ -100,4 +100,24 @@ public abstract class Entity : MonoBehaviour
     {
         currentGold /= 2;
     }
+
+    public int CalculateDamageAgainst(Entity target)
+    {
+        // Base Damage
+        float baseDamage = (this.atk / 2f) - (target.def / 4f);
+
+        // Base Damage <= 0 -> return 0 or -1
+        if (baseDamage <= 0)
+        {
+            int roll = Random.Range(0, 2);
+            return roll - 1;
+        }
+
+        // Range
+        float range = (baseDamage / 16f) + 1f;
+        int min = Mathf.FloorToInt(baseDamage - range);
+        int max = Mathf.CeilToInt(baseDamage + range);
+
+        return Random.Range(min, max + 1);
+    }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class BattleManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class BattleManager : MonoBehaviour
     private PlayerState player;
     [SerializeField] private Enemy enemy;
     [SerializeField] private GameObject battlePanel;
+    [SerializeField] private RawImage enemyDisplay;
 
     private Queue<Entity> turnQueue = new Queue<Entity>();
     private bool battleActive = false;
@@ -29,6 +31,8 @@ public class BattleManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        //battlePanel = GameObject.Find("BattleMenus");
     }
 
     public void InstantiateBattle(GameObject enemyPrefab)
@@ -37,6 +41,8 @@ public class BattleManager : MonoBehaviour
 
         player = PlayerState.instance;
         enemy = newEnemyObj.GetComponent<Enemy>();
+        //enemyDisplay = GameObject.Find("EnemySprite").GetComponent<RawImage>();
+        enemyDisplay.texture = enemy.EnemySprite;
 
         //Initialize the enemy
         enemy.InitializeEnemySpawn();
@@ -51,15 +57,6 @@ public class BattleManager : MonoBehaviour
 
         battleActive = true;
         StartCoroutine(ProcessTurn());
-    }
-
-    public void StartBattle()
-    {
-        Debug.Log("Battle has started!");
-        
-        // Create an instance from a prefab here!
-        // This function should take in parameters for the randomly chosen enemy in RandomEncounter, as that class contains the info of which scene to pick enemies from
-        // Instantiate a prefab based on the parameter
     }
 
     private void EndBattle()
@@ -92,6 +89,7 @@ public class BattleManager : MonoBehaviour
             // - Player or enemy ran away
             CleanupBattleUI();
         }
+        
     }
 
     private void CleanupBattleUI()
@@ -122,6 +120,7 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator ProcessTurn()
     {
+        yield return BattleMessageLog.Instance.ShowMessage($"A {enemy.ENTNAME} appeared!");
         while (battleActive)
         {
             Entity actor = turnQueue.Dequeue();
@@ -146,6 +145,7 @@ public class BattleManager : MonoBehaviour
                 yield break;
             }
         }
+        yield return BattleMessageLog.Instance.ShowMessage("");
     }
 
     private IEnumerator PlayerTurn()
@@ -168,14 +168,19 @@ public class BattleManager : MonoBehaviour
         {
             case 0: // Fight
                 Debug.Log("Player chooses FIGHT");
-                enemy.TakeDamage(player.ATK);
+                yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} attacks!");
+                int dmg = player.CalculateDamageAgainst(enemy);
+                enemy.TakeDamage(dmg);
+                yield return BattleMessageLog.Instance.ShowMessage($"{enemy.ENTNAME} takes {dmg} damage!");
                 BattleUI.instance.UpdateStats();
                 // Optional: small delay for readability/animation
-                yield return new WaitForSeconds(0.4f);
+                //yield return new WaitForSeconds(0.4f);
+                yield return BattleMessageLog.Instance.ShowMessage(""); // Clear the action message
                 break;
 
             case 1: // Flee
                 Debug.Log("Player chooses FLEE");
+                yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} runs away!");
                 // Implement flee chance if you want; for now just end battle as before
                 EndBattle();
                 yield break;
@@ -186,10 +191,14 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator EnemyTurn()
     {
-        yield return new WaitForSeconds(1f);
+        yield return BattleMessageLog.Instance.ShowMessage($"{enemy.ENTNAME} attacks!");
+        //yield return new WaitForSeconds(1f);
 
-        player.TakeDamage(enemy.ATK);
+        int dmg = player.CalculateDamageAgainst(player);
+        player.TakeDamage(dmg);
+        yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} takes {dmg} damage!");
 
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.5f);
+        yield return BattleMessageLog.Instance.ShowMessage("");
     }
 }

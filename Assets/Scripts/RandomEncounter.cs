@@ -17,13 +17,14 @@ public class RandomEncounter : MonoBehaviour
     [Header("References")]
     [SerializeField] private BattleManager battleManager;
     //[SerializeField] private GameObject battlePanel;
-    [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] private EncounterTable encounterTable;
 
     private bool canTrigger = true;
 
     private void Start()
     {
         randomTimerThreshold = Random.Range(randomTimerRangeMin, randomTimerRangeMax);
+        encounterTable = FindFirstObjectByType<EncounterTable>();
         battleManager = BattleManager.instance;
     }
 
@@ -31,7 +32,7 @@ public class RandomEncounter : MonoBehaviour
     {
         bool isMoving = Mathf.Abs(moveX) > 0.1f || Mathf.Abs(moveY) > 0.1f;
 
-        if (isMoving)
+        if (isMoving) // And if in a dangerous scene
         {
             randomTimer += Time.deltaTime;
 
@@ -48,7 +49,7 @@ public class RandomEncounter : MonoBehaviour
         
         randomTimer = 0f;
         randomTimerThreshold = Random.Range(randomTimerRangeMin, randomTimerRangeMax);
-        GameObject chosenPrefab = enemyPrefabs[0];
+        GameObject chosenPrefab = encounterTable.GetRandomEnemy();
 
         if (battleManager != null )
         {

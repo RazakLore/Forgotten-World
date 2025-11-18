@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class BattleUI : MonoBehaviour
 {
@@ -15,10 +16,12 @@ public class BattleUI : MonoBehaviour
     [Header("Action Buttons")]
     [SerializeField] private GameObject fightButton;
     [SerializeField] private GameObject fleeButton;
+    [SerializeField] private GameObject miscButton;
 
     private int selectedIndex = 0;
     private GameObject[] buttons;
     public System.Action<int> OnActionChosen;
+    public BattleMessageLog messageLog;
 
     public bool waitingForPlayerInput = false;
 
@@ -29,7 +32,7 @@ public class BattleUI : MonoBehaviour
         else
             Destroy(gameObject);
 
-        buttons = new GameObject[] { fightButton, fleeButton };
+        buttons = new GameObject[] { fightButton, fleeButton, miscButton };
 
         HighlightButton(0);
         battlePanel.SetActive(false);

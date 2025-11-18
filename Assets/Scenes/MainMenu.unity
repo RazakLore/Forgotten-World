@@ -1762,6 +1762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   playerPrefab: {fileID: 7378728723957277128, guid: cd80e0cf23e74f347a714eafdb41e6f4, type: 3}
   playerInstance: {fileID: 0}
+  targetDoorID: 
 --- !u!4 &2105745777
 Transform:
   m_ObjectHideFlags: 0

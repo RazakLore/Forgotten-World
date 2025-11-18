@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : Entity
 {
@@ -8,6 +9,9 @@ public class Enemy : Entity
     // ATTACK PATTERNS are also ideal to have, so I can easily preprogram battle logic for enemies. I.e. t1 is attack t2 is defend t3 is attack t4 is flee.
     // We can probably make a base attack pattern to inherit from. Probably use a state machine to see each pattern and the last action can change state to pattern 2 for example.
     // Randomise the patterns by having some actions provide a 50/50 to continue or change pattern?
+
+    [SerializeField] private Texture2D enemySprite;
+    public Texture2D EnemySprite => enemySprite;
 
     private void Awake()
     {
