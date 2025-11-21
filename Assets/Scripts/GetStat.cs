@@ -5,6 +5,7 @@ public class GetStat : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private PlayerState playerStats;
+    [SerializeField] private string classInstanceID;
     [SerializeField] private TextMeshProUGUI displayPlayerName;
     [SerializeField] private TextMeshProUGUI displayHP;
     [SerializeField] private TextMeshProUGUI displayMP;
@@ -13,6 +14,8 @@ public class GetStat : MonoBehaviour
     [SerializeField] private TextMeshProUGUI displayAgi;
     [SerializeField] private TextMeshProUGUI displayXp;
     [SerializeField] private TextMeshProUGUI displayGold;
+
+    public string CLASSINSTANCEID => classInstanceID;
 
     void Start()
     {

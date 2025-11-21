@@ -13,6 +13,7 @@ public class RandomEncounter : MonoBehaviour
     [SerializeField] private int randomTimerThreshold;
     [SerializeField] private int randomTimerRangeMin = 4;
     [SerializeField] private int randomTimerRangeMax = 9;
+    [SerializeField] private bool isTimerPaused;
 
     [Header("References")]
     [SerializeField] private BattleManager battleManager;
@@ -30,15 +31,18 @@ public class RandomEncounter : MonoBehaviour
 
     public void HandleEncounterTimer(float moveX, float moveY)
     {
-        bool isMoving = Mathf.Abs(moveX) > 0.1f || Mathf.Abs(moveY) > 0.1f;
-
-        if (isMoving) // And if in a dangerous scene
+        if (!isTimerPaused)
         {
-            randomTimer += Time.deltaTime;
+            bool isMoving = Mathf.Abs(moveX) > 0.1f || Mathf.Abs(moveY) > 0.1f;
 
-            if (randomTimer > randomTimerThreshold)
+            if (isMoving) // And if in a dangerous scene
             {
-                TriggerEncounter();
+                randomTimer += Time.deltaTime;
+
+                if (randomTimer > randomTimerThreshold)
+                {
+                    TriggerEncounter();
+                }
             }
         }
     }
@@ -65,9 +69,24 @@ public class RandomEncounter : MonoBehaviour
 
     public void ResumeEncounterDetection()
     {
+        isTimerPaused = false;
         canTrigger = true;
         //if (battlePanel.activeInHierarchy)
         //    battlePanel.SetActive(false);
-        
+
+    }
+
+    public void GetEncounterTable()
+    {
+        encounterTable = FindFirstObjectByType<EncounterTable>().GetComponent<EncounterTable>();
+        if (!encounterTable.enabled)
+        {
+            isTimerPaused = true;
+            randomTimer = 0;
+        }
+        else
+        {
+            ResumeEncounterDetection();
+        }
     }
 }

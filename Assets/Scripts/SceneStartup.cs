@@ -23,6 +23,7 @@ public class SceneStartup : MonoBehaviour
         if (string.IsNullOrEmpty(targetDoorID)) return;
 
         GameObject player = GameObject.FindWithTag("Player");   // Get the player
+        player.GetComponent<RandomEncounter>().GetEncounterTable();
 
         GameObject spawnPoint = GameObject.FindGameObjectWithTag("DoorSpawnPoint");     // Debug just to grab the ONLY spawn point in the scene, change to search by ID and tag later?
         Debug.Log(spawnPoint.name);

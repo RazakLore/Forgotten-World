@@ -283,6 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495610156}
   - component: {fileID: 495610155}
+  - component: {fileID: 495610157}
   m_Layer: 0
   m_Name: CellstowerManager
   m_TagString: Untagged
@@ -317,6 +318,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495610157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495610154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9955205f48b7d49bfd1028569ae979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EncounterTable
+  enemyPrefabs:
+  - {fileID: 1551631794165839525, guid: a681b0bcd3a003648988fc911eae154d, type: 3}
+  - {fileID: 1551631794165839525, guid: bd4a032b3adc1fb45ab0321116974a62, type: 3}
 --- !u!1 &970899446
 GameObject:
   m_ObjectHideFlags: 0

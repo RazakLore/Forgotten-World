@@ -80,6 +80,8 @@ public class BattleManager : MonoBehaviour
             Debug.Log(player.ENTNAME + " won the battle!");
             // Enemy dies
             player.PlayerGainXPGold(enemy.XP, enemy.GOLD);
+            GetStat statUpdater = FindFirstObjectByType<GetStat>().GetComponent<GetStat>();
+            statUpdater.GrabTheStats();
             CleanupBattleUI();
             return;
         }
@@ -186,8 +188,6 @@ public class BattleManager : MonoBehaviour
                 yield break;
         }
     }
-
-
 
     private IEnumerator EnemyTurn()
     {

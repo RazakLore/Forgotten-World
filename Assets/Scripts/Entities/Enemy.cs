@@ -15,11 +15,6 @@ public class Enemy : Entity
 
     private void Awake()
     {
-        //maxHp = MAXHP;
-        //currentHP = maxHP;
-        //maxMP = MAXMP;
-        //currentMP = maxMP;
-        //currentATK = ATK;
-        //currentAGI = AGI;
+
     }
 }
