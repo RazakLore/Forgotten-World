@@ -257,8 +257,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 240
+        x: 0
+        y: 224
         width: 16
         height: 16
       alignment: 0
@@ -279,7 +279,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_8
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 224
         width: 16
         height: 16
@@ -301,7 +301,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_9
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 224
         width: 16
         height: 16
@@ -323,7 +323,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_10
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 224
         width: 16
         height: 16
@@ -345,7 +345,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_11
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 224
         width: 16
         height: 16
@@ -367,7 +367,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_12
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 224
         width: 16
         height: 16
@@ -389,7 +389,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_13
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 224
         width: 16
         height: 16
@@ -411,7 +411,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_14
       rect:
         serializedVersion: 2
-        x: 96
+        x: 112
         y: 224
         width: 16
         height: 16
@@ -433,8 +433,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_15
       rect:
         serializedVersion: 2
-        x: 112
-        y: 224
+        x: 0
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -455,7 +455,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_16
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 208
         width: 16
         height: 16
@@ -477,7 +477,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_17
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 208
         width: 16
         height: 16
@@ -499,7 +499,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_18
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 208
         width: 16
         height: 16
@@ -521,7 +521,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_19
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 208
         width: 16
         height: 16
@@ -543,7 +543,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_20
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 208
         width: 16
         height: 16
@@ -565,7 +565,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_21
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 208
         width: 16
         height: 16
@@ -587,8 +587,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_22
       rect:
         serializedVersion: 2
-        x: 96
-        y: 208
+        x: 32
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -609,7 +609,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_23
       rect:
         serializedVersion: 2
-        x: 32
+        x: 80
         y: 192
         width: 16
         height: 16
@@ -631,7 +631,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_24
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 192
         width: 16
         height: 16
@@ -653,8 +653,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_25
       rect:
         serializedVersion: 2
-        x: 96
-        y: 192
+        x: 0
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -675,7 +675,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_26
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 176
         width: 16
         height: 16
@@ -697,7 +697,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_27
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 176
         width: 16
         height: 16
@@ -719,7 +719,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_28
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 176
         width: 16
         height: 16
@@ -741,8 +741,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_29
       rect:
         serializedVersion: 2
-        x: 48
-        y: 176
+        x: 0
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -763,7 +763,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_30
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 160
         width: 16
         height: 16
@@ -785,7 +785,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_31
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 160
         width: 16
         height: 16
@@ -807,7 +807,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_32
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 160
         width: 16
         height: 16
@@ -829,7 +829,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_33
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 160
         width: 16
         height: 16
@@ -851,7 +851,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_34
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 160
         width: 16
         height: 16
@@ -873,7 +873,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_35
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 160
         width: 16
         height: 16
@@ -895,7 +895,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_36
       rect:
         serializedVersion: 2
-        x: 96
+        x: 112
         y: 160
         width: 16
         height: 16
@@ -917,8 +917,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_37
       rect:
         serializedVersion: 2
-        x: 112
-        y: 160
+        x: 0
+        y: 144
         width: 16
         height: 16
       alignment: 0
@@ -939,7 +939,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_38
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 144
         width: 16
         height: 16
@@ -961,7 +961,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_39
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 144
         width: 16
         height: 16
@@ -983,7 +983,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_40
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 144
         width: 16
         height: 16
@@ -1005,7 +1005,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_41
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 144
         width: 16
         height: 16
@@ -1027,7 +1027,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_42
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 144
         width: 16
         height: 16
@@ -1049,7 +1049,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_43
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 144
         width: 16
         height: 16
@@ -1071,7 +1071,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_44
       rect:
         serializedVersion: 2
-        x: 96
+        x: 112
         y: 144
         width: 16
         height: 16
@@ -1093,7 +1093,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_45
       rect:
         serializedVersion: 2
-        x: 112
+        x: 128
         y: 144
         width: 16
         height: 16
@@ -1115,7 +1115,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_46
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 144
         width: 16
         height: 16
@@ -1137,7 +1137,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_47
       rect:
         serializedVersion: 2
-        x: 144
+        x: 160
         y: 144
         width: 16
         height: 16
@@ -1159,7 +1159,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_48
       rect:
         serializedVersion: 2
-        x: 160
+        x: 176
         y: 144
         width: 16
         height: 16
@@ -1181,8 +1181,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_49
       rect:
         serializedVersion: 2
-        x: 176
-        y: 144
+        x: 0
+        y: 128
         width: 16
         height: 16
       alignment: 0
@@ -1203,7 +1203,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_50
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 128
         width: 16
         height: 16
@@ -1225,7 +1225,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_51
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 128
         width: 16
         height: 16
@@ -1247,7 +1247,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_52
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 128
         width: 16
         height: 16
@@ -1269,7 +1269,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_53
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 128
         width: 16
         height: 16
@@ -1291,7 +1291,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_54
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 128
         width: 16
         height: 16
@@ -1313,7 +1313,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_55
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 128
         width: 16
         height: 16
@@ -1335,7 +1335,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_56
       rect:
         serializedVersion: 2
-        x: 96
+        x: 112
         y: 128
         width: 16
         height: 16
@@ -1357,7 +1357,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_57
       rect:
         serializedVersion: 2
-        x: 112
+        x: 128
         y: 128
         width: 16
         height: 16
@@ -1379,7 +1379,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_58
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 128
         width: 16
         height: 16
@@ -1401,7 +1401,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_59
       rect:
         serializedVersion: 2
-        x: 144
+        x: 160
         y: 128
         width: 16
         height: 16
@@ -1423,7 +1423,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_60
       rect:
         serializedVersion: 2
-        x: 160
+        x: 176
         y: 128
         width: 16
         height: 16
@@ -1445,7 +1445,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_61
       rect:
         serializedVersion: 2
-        x: 176
+        x: 192
         y: 128
         width: 16
         height: 16
@@ -1467,7 +1467,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_62
       rect:
         serializedVersion: 2
-        x: 192
+        x: 208
         y: 128
         width: 16
         height: 16
@@ -1489,8 +1489,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_63
       rect:
         serializedVersion: 2
-        x: 208
-        y: 128
+        x: 16
+        y: 112
         width: 16
         height: 16
       alignment: 0
@@ -1511,7 +1511,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_64
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 112
         width: 16
         height: 16
@@ -1533,7 +1533,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_65
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 112
         width: 16
         height: 16
@@ -1555,7 +1555,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_66
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 112
         width: 16
         height: 16
@@ -1577,7 +1577,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_67
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 112
         width: 16
         height: 16
@@ -1599,7 +1599,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_68
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 112
         width: 16
         height: 16
@@ -1621,7 +1621,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_69
       rect:
         serializedVersion: 2
-        x: 96
+        x: 112
         y: 112
         width: 16
         height: 16
@@ -1643,7 +1643,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_70
       rect:
         serializedVersion: 2
-        x: 112
+        x: 128
         y: 112
         width: 16
         height: 16
@@ -1665,7 +1665,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_71
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 112
         width: 16
         height: 16
@@ -1687,7 +1687,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_72
       rect:
         serializedVersion: 2
-        x: 144
+        x: 160
         y: 112
         width: 16
         height: 16
@@ -1709,7 +1709,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_73
       rect:
         serializedVersion: 2
-        x: 160
+        x: 176
         y: 112
         width: 16
         height: 16
@@ -1731,7 +1731,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_74
       rect:
         serializedVersion: 2
-        x: 176
+        x: 192
         y: 112
         width: 16
         height: 16
@@ -1753,7 +1753,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_75
       rect:
         serializedVersion: 2
-        x: 192
+        x: 208
         y: 112
         width: 16
         height: 16
@@ -1907,8 +1907,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_82
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
+        x: 96
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1929,8 +1929,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_83
       rect:
         serializedVersion: 2
-        x: 16
-        y: 80
+        x: 112
+        y: 96
         width: 16
         height: 16
       alignment: 0
@@ -1951,7 +1951,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_84
       rect:
         serializedVersion: 2
-        x: 32
+        x: 0
         y: 80
         width: 16
         height: 16
@@ -1973,7 +1973,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_85
       rect:
         serializedVersion: 2
-        x: 48
+        x: 16
         y: 80
         width: 16
         height: 16
@@ -1995,7 +1995,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_86
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 80
         width: 16
         height: 16
@@ -2017,7 +2017,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_87
       rect:
         serializedVersion: 2
-        x: 80
+        x: 48
         y: 80
         width: 16
         height: 16
@@ -2039,7 +2039,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_88
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 80
         width: 16
         height: 16
@@ -2061,7 +2061,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_89
       rect:
         serializedVersion: 2
-        x: 112
+        x: 80
         y: 80
         width: 16
         height: 16
@@ -2083,7 +2083,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_90
       rect:
         serializedVersion: 2
-        x: 128
+        x: 96
         y: 80
         width: 16
         height: 16
@@ -2105,7 +2105,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_91
       rect:
         serializedVersion: 2
-        x: 144
+        x: 112
         y: 80
         width: 16
         height: 16
@@ -2127,7 +2127,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_92
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 80
         width: 16
         height: 16
@@ -2149,8 +2149,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_93
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 144
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -2171,8 +2171,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_94
       rect:
         serializedVersion: 2
-        x: 16
-        y: 64
+        x: 160
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -2193,8 +2193,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_95
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 176
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -2215,7 +2215,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_96
       rect:
         serializedVersion: 2
-        x: 48
+        x: 0
         y: 64
         width: 16
         height: 16
@@ -2237,7 +2237,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_97
       rect:
         serializedVersion: 2
-        x: 64
+        x: 16
         y: 64
         width: 16
         height: 16
@@ -2259,7 +2259,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_98
       rect:
         serializedVersion: 2
-        x: 80
+        x: 32
         y: 64
         width: 16
         height: 16
@@ -2281,7 +2281,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_99
       rect:
         serializedVersion: 2
-        x: 96
+        x: 48
         y: 64
         width: 16
         height: 16
@@ -2303,7 +2303,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_100
       rect:
         serializedVersion: 2
-        x: 112
+        x: 64
         y: 64
         width: 16
         height: 16
@@ -2325,7 +2325,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_101
       rect:
         serializedVersion: 2
-        x: 128
+        x: 80
         y: 64
         width: 16
         height: 16
@@ -2347,7 +2347,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_102
       rect:
         serializedVersion: 2
-        x: 144
+        x: 112
         y: 64
         width: 16
         height: 16
@@ -2369,7 +2369,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_103
       rect:
         serializedVersion: 2
-        x: 160
+        x: 128
         y: 64
         width: 16
         height: 16
@@ -2391,8 +2391,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_104
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 144
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2413,8 +2413,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_105
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
+        x: 160
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2435,8 +2435,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_106
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
+        x: 176
+        y: 64
         width: 16
         height: 16
       alignment: 0
@@ -2457,7 +2457,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_107
       rect:
         serializedVersion: 2
-        x: 48
+        x: 0
         y: 48
         width: 16
         height: 16
@@ -2479,7 +2479,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_108
       rect:
         serializedVersion: 2
-        x: 64
+        x: 16
         y: 48
         width: 16
         height: 16
@@ -2501,7 +2501,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_109
       rect:
         serializedVersion: 2
-        x: 80
+        x: 32
         y: 48
         width: 16
         height: 16
@@ -2523,7 +2523,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_110
       rect:
         serializedVersion: 2
-        x: 96
+        x: 48
         y: 48
         width: 16
         height: 16
@@ -2545,7 +2545,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_111
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 48
         width: 16
         height: 16
@@ -2567,7 +2567,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_112
       rect:
         serializedVersion: 2
-        x: 144
+        x: 80
         y: 48
         width: 16
         height: 16
@@ -2589,8 +2589,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_113
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 112
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2611,8 +2611,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_114
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
+        x: 128
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2633,8 +2633,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_115
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 144
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2655,8 +2655,8 @@ TextureImporter:
       name: ForgottenOverworldTileset_116
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
+        x: 160
+        y: 48
         width: 16
         height: 16
       alignment: 0
@@ -2677,7 +2677,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_117
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 32
         width: 16
         height: 16
@@ -2699,7 +2699,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_118
       rect:
         serializedVersion: 2
-        x: 80
+        x: 16
         y: 32
         width: 16
         height: 16
@@ -2721,7 +2721,7 @@ TextureImporter:
       name: ForgottenOverworldTileset_119
       rect:
         serializedVersion: 2
-        x: 96
+        x: 32
         y: 32
         width: 16
         height: 16
@@ -2735,6 +2735,160 @@ TextureImporter:
       bones: []
       spriteID: 12c4e04c35966724bb5ed931853a2e7c
       internalID: 1082915297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenOverworldTileset_120
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c59d282e2994ec48aceccca85fa5269
+      internalID: 509030442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenOverworldTileset_121
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866b24a6635ce6142932c42798fbc1e3
+      internalID: 1908180973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenOverworldTileset_122
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df89c6272de46d47bdb5ebd3049f757
+      internalID: -1549716426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenOverworldTileset_123
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee6aa12a926de5498837e8ae058c1a6
+      internalID: -2012167146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenOverworldTileset_124
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6be44d0fd611c4994e9a587df5320a
+      internalID: 1993198473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenOverworldTileset_125
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af70f4c0f03a724fa6613d75f88c7a1
+      internalID: 293655765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForgottenOverworldTileset_126
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c88fb1169f8fe49a768cee1c40b85b
+      internalID: 2018462043
       vertices: []
       indices: 
       edges: []
@@ -2780,6 +2934,13 @@ TextureImporter:
       ForgottenOverworldTileset_118: 608621996
       ForgottenOverworldTileset_119: 1082915297
       ForgottenOverworldTileset_12: -948325591
+      ForgottenOverworldTileset_120: 509030442
+      ForgottenOverworldTileset_121: 1908180973
+      ForgottenOverworldTileset_122: -1549716426
+      ForgottenOverworldTileset_123: -2012167146
+      ForgottenOverworldTileset_124: 1993198473
+      ForgottenOverworldTileset_125: 293655765
+      ForgottenOverworldTileset_126: 2018462043
       ForgottenOverworldTileset_13: 160034603
       ForgottenOverworldTileset_14: 600526966
       ForgottenOverworldTileset_15: -327623296
