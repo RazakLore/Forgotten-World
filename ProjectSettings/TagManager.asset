@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DoorSpawnPoint
   - NPC
+  - PlayerInteraction
   layers:
   - Default
   - TransparentFX

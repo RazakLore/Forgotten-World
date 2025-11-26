@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Overworld.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Halenburg/Halenburg_Exterior.unity
+    path: Assets/Scenes/Halenburg_Exterior.unity
     guid: 22f5480079b8f304d9acf65f6b0906c4
   - enabled: 1
-    path: Assets/Scenes/Lorensway/Lorensway_Exterior.unity
+    path: Assets/Scenes/Lorensway_Exterior.unity
     guid: 9a8eaf605f2ae5a4e8c91741252e8662
   - enabled: 1
     path: Assets/Scenes/Cellstower.unity
