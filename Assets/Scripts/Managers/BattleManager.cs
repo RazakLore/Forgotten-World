@@ -17,6 +17,9 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private GameObject battlePanel;
     [SerializeField] private RawImage enemyDisplay;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip attackSFX;
+
     private Queue<Entity> turnQueue = new Queue<Entity>();
     private bool battleActive = false;
 
@@ -173,6 +176,7 @@ public class BattleManager : MonoBehaviour
                 yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} attacks!");
                 int dmg = player.CalculateDamageAgainst(enemy);
                 enemy.TakeDamage(dmg);
+                GetComponent<AudioSource>().PlayOneShot(attackSFX);
                 yield return BattleMessageLog.Instance.ShowMessage($"{enemy.ENTNAME} takes {dmg} damage!");
                 BattleUI.instance.UpdateStats();
                 // Optional: small delay for readability/animation
@@ -196,6 +200,7 @@ public class BattleManager : MonoBehaviour
 
         int dmg = player.CalculateDamageAgainst(player);
         player.TakeDamage(dmg);
+        GetComponent<AudioSource>().PlayOneShot(attackSFX);
         yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} takes {dmg} damage!");
 
         //yield return new WaitForSeconds(0.5f);
