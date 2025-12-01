@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerState : Entity
 {
     public static PlayerState instance;
-    private List<Item> inventory = new List<Item>();
+    public List<Item> inventory = new List<Item>();
     private int maxInventorySlots = 20;
 
     private int maxLvl, maxLvlStatValue;
@@ -59,6 +59,7 @@ public class PlayerState : Entity
         maxHp += Random.Range(3, 6);
         atk += Random.Range(1, 3);
         agi += Random.Range(1, 4);
+        def += Random.Range(1, 3); 
         if (lvl >= 3)
             maxMp += Random.Range(2, 5);
 
@@ -77,6 +78,7 @@ public class PlayerState : Entity
         maxMp = Mathf.Min(maxMp, 999);
         atk = Mathf.Min(atk, 999);
         agi = Mathf.Min(agi, 999);
+        def = Mathf.Min(def, 999);
     }
 
     public void AddGold(int amount)

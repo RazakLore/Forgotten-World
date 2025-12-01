@@ -7,11 +7,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private RandomEncounter randomEncounter;
+    private Animator anim;
     private bool canMove = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = gameObject.GetComponentInChildren<Animator>();
         randomEncounter = GetComponent<RandomEncounter>();
 
         if (instance == null)
@@ -37,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         movement.Normalize();
+
+        anim.SetFloat("MoveX", movement.x);
+        anim.SetFloat("MoveY", movement.y);
 
         randomEncounter.HandleEncounterTimer(movement.x, movement.y);
     }

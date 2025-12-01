@@ -41878,6 +41878,7 @@ MonoBehaviour:
   battlePanel: {fileID: 1471666585}
   enemyDisplay: {fileID: 1752954879}
   attackSFX: {fileID: 8300000, guid: 7d7ef760886a30141baa69ccea7b2ddb, type: 3}
+  battleMusic: {fileID: 8300000, guid: 5f7ca22df174234429c2538668541254, type: 3}
 --- !u!4 &1773980621
 Transform:
   m_ObjectHideFlags: 0

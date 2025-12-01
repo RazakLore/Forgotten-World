@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -19,9 +20,16 @@ public class BattleManager : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioClip attackSFX;
+    [SerializeField] private AudioClip battleMusic;
+    private AudioClip overworldMusic;
 
     private Queue<Entity> turnQueue = new Queue<Entity>();
     private bool battleActive = false;
+
+    // Boss stuff
+    private bool bossBattle = false;
+    private BossTrigger currentBossTrigger = null;
+    private string currentBossFlag = "";
 
     private void Awake()
     {
@@ -40,25 +48,26 @@ public class BattleManager : MonoBehaviour
 
     public void InstantiateBattle(GameObject enemyPrefab)
     {
-        GameObject newEnemyObj = Instantiate(enemyPrefab);
+        SetupBattle(enemyPrefab, false, null, "");
+        //GameObject newEnemyObj = Instantiate(enemyPrefab);
 
-        player = PlayerState.instance;
-        enemy = newEnemyObj.GetComponent<Enemy>();
-        enemyDisplay.texture = enemy.EnemySprite;
+        //player = PlayerState.instance;
+        //enemy = newEnemyObj.GetComponent<Enemy>();
+        //enemyDisplay.texture = enemy.EnemySprite;
 
-        //Initialize the enemy
-        enemy.InitializeEnemySpawn();
+        ////Initialize the enemy
+        //enemy.InitializeEnemySpawn();
 
-        //Enable the battle UI object
-        BattleUI.instance.Show();
+        ////Enable the battle UI object
+        //BattleUI.instance.Show();
 
-        //Relinquish control from player?
+        ////Relinquish control from player?
 
-        //Set up the turn queue, agility based
-        DetermineTurnOrder();
+        ////Set up the turn queue, agility based
+        //DetermineTurnOrder();
 
-        battleActive = true;
-        StartCoroutine(ProcessTurn());
+        //battleActive = true;
+        //StartCoroutine(ProcessTurn());
     }
 
     private void EndBattle()
@@ -83,21 +92,62 @@ public class BattleManager : MonoBehaviour
             // Enemy dies
             player.AddXP(enemy.XP);
             player.AddGold(enemy.GOLD);
+
             GetStat[] statUpdaters = FindObjectsByType<GetStat>(FindObjectsSortMode.None);
             foreach (GetStat stat in statUpdaters)
-            {
                 stat.GrabTheStats();
-            }
+
+            if (bossBattle && currentBossTrigger != null)
+                currentBossTrigger.OnBossDefeated();
+
             CleanupBattleUI();
             return;
         }
         else
         {
             Debug.Log("Somebody ran away!");
-            // - Player or enemy ran away
             CleanupBattleUI();
         }
         
+        bossBattle = false;
+        currentBossTrigger = null;
+        currentBossFlag = "";
+    }
+
+    public void InstantiateBossBattle(GameObject boss, BossTrigger trigger, string bossFlagName = "")
+    {
+        SetupBattle(boss, true, trigger, bossFlagName);
+    }
+
+    private void SetupBattle(GameObject enemyPrefab, bool isBoss, BossTrigger trigger, string bossFlagName)
+    {
+        GameObject newEnemyObj = Instantiate(enemyPrefab);
+
+        player = PlayerState.instance;
+        enemy = newEnemyObj.GetComponent<Enemy>();
+        enemyDisplay.texture = enemy.EnemySprite;
+
+        enemy.InitializeEnemySpawn();
+
+        BattleUI.instance.Show();
+        DetermineTurnOrder();
+
+        battleActive = true;
+
+        bossBattle = isBoss;
+        currentBossTrigger = trigger;
+        currentBossFlag = bossFlagName;
+
+        // Disable player movement
+        PlayerMovement.instance.SetCanMove(false);
+        UIStateController.CurrentState = UIState.Battle;
+
+        overworldMusic = FindFirstObjectByType<SceneStartup>().GetComponent<AudioSource>().clip;
+        AudioSource battleAudioSource = FindFirstObjectByType<SceneStartup>().GetComponent<AudioSource>();
+        battleAudioSource.clip = battleMusic;
+        battleAudioSource.Play();
+
+        StartCoroutine(ProcessTurn());
     }
 
     private void CleanupBattleUI()
@@ -107,6 +157,9 @@ public class BattleManager : MonoBehaviour
         BattleUI.instance.Hide();
         PlayerMovement.instance.SetCanMove(true);
         UIStateController.CurrentState = UIState.Gameplay;
+
+        AudioSource battleAudioSource = FindFirstObjectByType<SceneStartup>().GetComponent<AudioSource>();
+        battleAudioSource.clip = overworldMusic; battleAudioSource.Play();
     }
 
     private void DetermineTurnOrder()
@@ -190,6 +243,13 @@ public class BattleManager : MonoBehaviour
 
             case 1: // Flee
                 Debug.Log("Player chooses FLEE");
+
+                if (bossBattle)
+                {
+                    Debug.Log("Player can't escape!");
+                    yield return BattleMessageLog.Instance.ShowMessage($"You can't escape!");
+                    break;
+                }
                 yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} runs away!");
                 // Implement flee chance if you want; for now just end battle as before
                 EndBattle();

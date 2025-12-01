@@ -90,11 +90,11 @@ public abstract class Entity : MonoBehaviour
         currentMp = maxMp;
     }
 
-    //public void PlayerGainXPGold(int xpToAdd, int goldToAdd)
-    //{
-    //    currentXp += xpToAdd;
-    //    currentGold += goldToAdd;
-    //}
+    public void RestoreStats()
+    {
+        currentHp = maxHp;
+        currentMp = maxMp;
+    }
 
     public void HalvePlayerGold()
     {
