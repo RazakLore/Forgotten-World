@@ -15,6 +15,6 @@ public class Enemy : Entity
 
     private void Awake()
     {
-
+        
     }
 }

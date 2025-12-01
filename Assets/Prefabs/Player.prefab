@@ -207,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
   menuCanvas: {fileID: 4427554759909672957}
   pauseMenuPanel: {fileID: 585928832438298920}
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!114 &9073474169489076670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4808,7 +4810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71dd4ede1d3195544a57cb6b770e1348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 2
+  moveSpeed: 5
 --- !u!114 &4713246586218753819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4841,14 +4843,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerState
   entityName: Razak
-  maxHp: 15
-  currentHp: 15
+  maxHp: 21
+  currentHp: 21
   maxMp: 0
   currentMp: 0
-  atk: 4
-  def: 3
-  agi: 5
-  lvl: 0
+  atk: 8
+  def: 6
+  agi: 6
+  lvl: 1
   currentXp: 0
   currentGold: 0
 --- !u!50 &6823334968357029577

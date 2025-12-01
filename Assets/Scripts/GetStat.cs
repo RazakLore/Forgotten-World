@@ -20,15 +20,17 @@ public class GetStat : MonoBehaviour
     void Start()
     {
         if (playerStats == null)
-            playerStats = GameObject.FindWithTag("Player").GetComponent<PlayerState>();
+            playerStats = PlayerState.instance;
 
         GrabTheStats();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
+        if (playerStats == null)
+            playerStats = PlayerState.instance;
+
+        GrabTheStats();
     }
 
     public void GrabTheStats()

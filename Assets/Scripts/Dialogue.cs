@@ -15,7 +15,7 @@ public class Dialogue : MonoBehaviour
 
         UIStateController.CurrentState = UIState.Dialogue;
         Debug.Log(dialogueLines[currentIndex]);
-        //DialogueUI.Instance.Show(dialogueLines[currentIndex]);
+        MenuManager.instance.ShowDialogue(dialogueLines[currentIndex]);
     }
 
     private void Update()
@@ -40,14 +40,14 @@ public class Dialogue : MonoBehaviour
             return;
         }
         Debug.Log(dialogueLines[currentIndex]);
-        //DialogueUI.Instance.Show(dialogueLines[currentIndex]);
+        MenuManager.instance.ShowDialogue(dialogueLines[currentIndex]);
     }
 
     private void EndDialogue()
     {
         inDialogue = false;
         GetComponent<NPC>().TurnStaticOff();
-        //DialogueUI.Instance.Hide();
+        MenuManager.instance.HideDialogue();
 
         UIStateController.CurrentState = UIState.Gameplay;
     }

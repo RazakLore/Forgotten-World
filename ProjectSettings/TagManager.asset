@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - PlayerInteraction
   - BattleManager
+  - DialogueBox
   layers:
   - Default
   - TransparentFX

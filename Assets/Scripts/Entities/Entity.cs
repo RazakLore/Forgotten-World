@@ -90,11 +90,11 @@ public abstract class Entity : MonoBehaviour
         currentMp = maxMp;
     }
 
-    public void PlayerGainXPGold(int xpToAdd, int goldToAdd)
-    {
-        currentXp += xpToAdd;
-        currentGold += goldToAdd;
-    }
+    //public void PlayerGainXPGold(int xpToAdd, int goldToAdd)
+    //{
+    //    currentXp += xpToAdd;
+    //    currentGold += goldToAdd;
+    //}
 
     public void HalvePlayerGold()
     {
@@ -110,7 +110,7 @@ public abstract class Entity : MonoBehaviour
         if (baseDamage <= 0)
         {
             int roll = Random.Range(0, 2);
-            return roll - 1;
+            return roll;
         }
 
         // Range

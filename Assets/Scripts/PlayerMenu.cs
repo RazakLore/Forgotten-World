@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerMenu : MonoBehaviour
 {
@@ -7,10 +8,17 @@ public class PlayerMenu : MonoBehaviour
 
     [Header("UI References")]
     public GameObject menuPanel;   // assign MenuPanel
-    public RectTransform arrow;    // assign Arrow Image RectTransform
-    public TextMeshProUGUI[] options; // assign ItemsText, SpellsText, MiscText
+    //public RectTransform arrow;    // assign Arrow Image RectTransform
+    public Button[] options; // assign ItemsText, SpellsText, MiscText
 
-    private int currentSelection = 0;
+    // Neighbour table
+    private int[] upMap = { 0, 1, 0, 1, 2, 3 };
+    private int[] downMap = { 2, 3, 4, 5, 0, 1 };
+    private int[] leftMap = { 0, 0, 2, 2, 4, 4 };
+    private int[] rightMap = { 1, 1, 3, 3, 5, 5 };
+
+    [SerializeField] private int currentSelection = 0;
+    [SerializeField] private PlayerMovement playerMoveReference;
     private bool isOpen = false;
 
     private void Awake()
@@ -26,6 +34,21 @@ public class PlayerMenu : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        playerMoveReference = PlayerMovement.instance;
+    }
+
+    private void OnEnable()
+    {
+        playerMoveReference = PlayerMovement.instance;
+        playerMoveReference.SetCanMove(false);
+    }
+
+    private void OnDisable()
+    {
+        playerMoveReference.SetCanMove(true);
+    }
 
     private void Update()
     {
@@ -38,14 +61,25 @@ public class PlayerMenu : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            currentSelection = (currentSelection - 1 + options.Length) % options.Length;
+            currentSelection = upMap[currentSelection];/*(currentSelection - 1 + options.Length) % options.Length;*/
             UpdateArrow();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            currentSelection = (currentSelection + 1) % options.Length;
+            currentSelection = downMap[currentSelection];
             UpdateArrow();
         }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currentSelection = leftMap[currentSelection];
+            UpdateArrow();
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currentSelection = rightMap[currentSelection];
+            UpdateArrow();
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -68,17 +102,38 @@ public class PlayerMenu : MonoBehaviour
     private void UpdateArrow()
     {
         // Move arrow next to the currently selected option
-        arrow.position = new Vector3(
-            arrow.position.x,
-            options[currentSelection].transform.position.y,
-            arrow.position.z
-        );
+        //arrow.position = new Vector3(
+        //    arrow.position.x,
+        //    options[currentSelection].transform.position.y,
+        //    arrow.position.z
+        //);
     }
 
     private void ConfirmSelection()
     {
-        string selected = options[currentSelection].text;
-        Debug.Log($"Selected {selected} from menu");
-        // Here you can open a detailed tab or future inventory/spells/etc.
+        string selected = options[currentSelection].GetComponentInChildren<TextMeshProUGUI>().text;
+        Debug.Log(options[currentSelection].GetComponentInChildren<TextMeshProUGUI>().text);
+
+        switch (selected)
+        {
+            case "Item":
+                // Call OpenInventory()
+                break;
+            case "Spell":
+
+                break;
+            case "Equip":
+
+                break;
+            case "Stats":
+
+                break;
+            case "Records":
+
+                break;
+            case "Misc": // Just quick save instead?
+
+                break;
+        }
     }
 }

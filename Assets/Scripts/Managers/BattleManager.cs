@@ -44,7 +44,6 @@ public class BattleManager : MonoBehaviour
 
         player = PlayerState.instance;
         enemy = newEnemyObj.GetComponent<Enemy>();
-        //enemyDisplay = GameObject.Find("EnemySprite").GetComponent<RawImage>();
         enemyDisplay.texture = enemy.EnemySprite;
 
         //Initialize the enemy
@@ -82,9 +81,13 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log(player.ENTNAME + " won the battle!");
             // Enemy dies
-            player.PlayerGainXPGold(enemy.XP, enemy.GOLD);
-            GetStat statUpdater = FindFirstObjectByType<GetStat>().GetComponent<GetStat>();
-            statUpdater.GrabTheStats();
+            player.AddXP(enemy.XP);
+            player.AddGold(enemy.GOLD);
+            GetStat[] statUpdaters = FindObjectsByType<GetStat>(FindObjectsSortMode.None);
+            foreach (GetStat stat in statUpdaters)
+            {
+                stat.GrabTheStats();
+            }
             CleanupBattleUI();
             return;
         }
@@ -177,6 +180,7 @@ public class BattleManager : MonoBehaviour
                 int dmg = player.CalculateDamageAgainst(enemy);
                 enemy.TakeDamage(dmg);
                 GetComponent<AudioSource>().PlayOneShot(attackSFX);
+                StartCoroutine(FlashUIRawImage(enemyDisplay));
                 yield return BattleMessageLog.Instance.ShowMessage($"{enemy.ENTNAME} takes {dmg} damage!");
                 BattleUI.instance.UpdateStats();
                 // Optional: small delay for readability/animation
@@ -198,12 +202,29 @@ public class BattleManager : MonoBehaviour
         yield return BattleMessageLog.Instance.ShowMessage($"{enemy.ENTNAME} attacks!");
         //yield return new WaitForSeconds(1f);
 
-        int dmg = player.CalculateDamageAgainst(player);
+        int dmg = enemy.CalculateDamageAgainst(player);
         player.TakeDamage(dmg);
         GetComponent<AudioSource>().PlayOneShot(attackSFX);
         yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} takes {dmg} damage!");
 
         //yield return new WaitForSeconds(0.5f);
         yield return BattleMessageLog.Instance.ShowMessage("");
+    }
+
+    private IEnumerator FlashUIRawImage(RawImage img)
+    {
+        // Ensure the image has its own material instance
+        //if (img.material == null || img.material.name.EndsWith("(Instance)") == false)
+        //    img.material = new Material(img.material);
+
+        Material mat = img.material;
+
+        // Flash white
+        mat.SetColor("_Tint", Color.white * 3f);
+
+        yield return new WaitForSeconds(0.1f);
+
+        // Reset (normal color)
+        mat.SetColor("_Tint", Color.white);
     }
 }
