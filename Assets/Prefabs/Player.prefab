@@ -2431,6 +2431,7 @@ MonoBehaviour:
   battlePanel: {fileID: 8677582094259667583}
   enemyDisplay: {fileID: 3596879463768712579}
   attackSFX: {fileID: 8300000, guid: 7d7ef760886a30141baa69ccea7b2ddb, type: 3}
+  battleMusic: {fileID: 0}
 --- !u!82 &5754345351934730179
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4741,7 +4742,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1972052937159084490, guid: cd3f7356948577b4387d88a454c5e2d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

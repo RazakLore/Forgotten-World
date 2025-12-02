@@ -25,6 +25,7 @@ public class BattleManager : MonoBehaviour
 
     private Queue<Entity> turnQueue = new Queue<Entity>();
     private bool battleActive = false;
+    private int playerChosenAction;
 
     // Boss stuff
     private bool bossBattle = false;
@@ -164,7 +165,6 @@ public class BattleManager : MonoBehaviour
 
     private void DetermineTurnOrder()
     {
-        // player goes first if agi > enemy agi
         turnQueue.Clear();
 
         if (player.AGI >= enemy.AGI)
@@ -182,47 +182,78 @@ public class BattleManager : MonoBehaviour
     private IEnumerator ProcessTurn()
     {
         yield return BattleMessageLog.Instance.ShowMessage($"A {enemy.ENTNAME} appeared!");
+
+        // If the player is NOT first, allow them to choose an action for the turn still
+
+        yield return StartCoroutine(PlayerChoosing());  // Without this, the battle falls apart. Enemy moves first before player can take turn.
+
         while (battleActive)
         {
             Entity actor = turnQueue.Dequeue();
 
+            if (playerChosenAction == -1)       // Before every turn after T1, the player must choose their action
+            {
+                yield return StartCoroutine(PlayerChoosing());
+            }
+
             if (actor == player)
             {
-                yield return StartCoroutine(PlayerTurn());
+                // Ask for input EACH time the player gets a turn
+                
+                yield return StartCoroutine(PlayerTurn(playerChosenAction));
+                playerChosenAction = -1;
             }
             else
             {
-                // Enemy's turn
                 yield return StartCoroutine(EnemyTurn());
             }
 
-            // Requeue the actor
-            turnQueue.Enqueue(actor);
+            // Requeue the actor if alive
+            if (actor.HP > 0)
+                turnQueue.Enqueue(actor);
 
-            // Check if the battle ended
+            // Check win/loss
             if (player.HP <= 0 || enemy.HP <= 0)
             {
                 EndBattle();
                 yield break;
             }
+
+            // Optional small delay so messages don't flood
+            yield return null;
         }
+
+
+
         yield return BattleMessageLog.Instance.ShowMessage("");
     }
 
-    private IEnumerator PlayerTurn()
+    private IEnumerator PlayerChoosing()
     {
         // Ensure UI shows current stats and selection starts at first button
         BattleUI.instance.UpdateStats();
         BattleUI.instance.ResetSelectionToFirst();
 
-        int action = -1;
+        playerChosenAction = -1;
 
         // Poll the UI each frame until player confirms (HandleMenuInput returns index or -1)
-        while (action == -1)
+        while (playerChosenAction == -1)
         {
-            action = BattleUI.instance.HandleMenuInput(); // returns -1 while choosing, or 0/1 when confirmed
+            playerChosenAction = BattleUI.instance.HandleMenuInput(); // returns -1 while choosing, or 0/1 when confirmed
+            
+            if (playerChosenAction == 1)
+            {
+                yield return StartCoroutine(AttemptFlee());
+                yield break;
+            }
+
             yield return null;
         }
+    }
+
+    private IEnumerator PlayerTurn(int action)
+    {
+        
 
         // Execute the chosen action
         switch (action)
@@ -269,6 +300,25 @@ public class BattleManager : MonoBehaviour
 
         //yield return new WaitForSeconds(0.5f);
         yield return BattleMessageLog.Instance.ShowMessage("");
+    }
+
+    private IEnumerator AttemptFlee()
+    {
+        float chance = Mathf.Clamp01((float)player.AGI / (player.AGI + enemy.AGI));
+
+        if (Random.value <= chance)
+        {
+            yield return BattleMessageLog.Instance.ShowMessage("You fled successfully!");
+            battleActive = false;
+            EndBattle();
+            yield break;
+        }
+        else
+        {
+            yield return BattleMessageLog.Instance.ShowMessage("Flee failed!");
+            // Important: set an action so the turn system continues
+            playerChosenAction = -1;
+        }
     }
 
     private IEnumerator FlashUIRawImage(RawImage img)
