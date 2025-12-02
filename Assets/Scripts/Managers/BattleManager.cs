@@ -26,6 +26,7 @@ public class BattleManager : MonoBehaviour
     private Queue<Entity> turnQueue = new Queue<Entity>();
     private bool battleActive = false;
     private int playerChosenAction;
+    private int actionStep = 0;
 
     // Boss stuff
     private bool bossBattle = false;
@@ -47,28 +48,114 @@ public class BattleManager : MonoBehaviour
         //battlePanel = GameObject.Find("BattleMenus");
     }
 
-    public void InstantiateBattle(GameObject enemyPrefab)
+    public void InstantiateBattle(GameObject enemyPrefab)                                               // This is a normal battle
     {
         SetupBattle(enemyPrefab, false, null, "");
-        //GameObject newEnemyObj = Instantiate(enemyPrefab);
+    }
 
-        //player = PlayerState.instance;
-        //enemy = newEnemyObj.GetComponent<Enemy>();
-        //enemyDisplay.texture = enemy.EnemySprite;
+    public void InstantiateBossBattle(GameObject boss, BossTrigger trigger, string bossFlagName = "")   // This is a boss battle
+    {
+        SetupBattle(boss, true, trigger, bossFlagName);                                                 // and boss battles need flags
+    }
 
-        ////Initialize the enemy
-        //enemy.InitializeEnemySpawn();
+    private void SetupBattle(GameObject enemyPrefab, bool isBoss, BossTrigger trigger, string bossFlagName)
+    {
+        GameObject newEnemyObj = Instantiate(enemyPrefab);      // Instantiate the fed in prefab
 
-        ////Enable the battle UI object
-        //BattleUI.instance.Show();
+        player = PlayerState.instance;                          // The player is the static player
+        enemy = newEnemyObj.GetComponent<Enemy>();              // Grab the enemy class from the prefab
+        enemyDisplay.texture = enemy.EnemySprite;               // Set the enemy display to the enemy class's texture
 
-        ////Relinquish control from player?
+        enemy.InitializeEnemySpawn();                           // Set enemy's health and mp maxed
 
-        ////Set up the turn queue, agility based
-        //DetermineTurnOrder();
+        BattleUI.instance.Show();                               // Display the battle UI
+        DetermineTurnOrder();                                   // Based on agility, determine who will go first
 
-        //battleActive = true;
-        //StartCoroutine(ProcessTurn());
+        battleActive = true;                                    // The battle IS active
+
+        bossBattle = isBoss;                                    // Quick section to set all the boss relevant variables if any
+        currentBossTrigger = trigger;
+        currentBossFlag = bossFlagName;
+
+        // Disable player movement
+        PlayerMovement.instance.SetCanMove(false);
+        UIStateController.CurrentState = UIState.Battle;
+
+        overworldMusic = FindFirstObjectByType<SceneStartup>().GetComponent<AudioSource>().clip;            // Set the music to the battle theme
+        AudioSource battleAudioSource = FindFirstObjectByType<SceneStartup>().GetComponent<AudioSource>();
+        battleAudioSource.clip = battleMusic;
+        battleAudioSource.Play();
+        actionStep = 0;
+
+        StartCoroutine(ProcessTurn());                          // Start the battle
+    }
+
+    private void DetermineTurnOrder()
+    {
+        turnQueue.Clear();              // Clear the turn order
+
+        if (player.AGI >= enemy.AGI)    // If the player is faster than or tied with the enemy
+        {
+            turnQueue.Enqueue(player);  // Queue the player first
+            turnQueue.Enqueue(enemy);   // Queue the enemy second
+        }
+        else
+        {
+            turnQueue.Enqueue(enemy);   // Or vice versa
+            turnQueue.Enqueue(player);
+        }
+
+        // To fix the bug, we could enqueue in first position for both a ChoosingTurn class (if it has to be a class)?
+        // Other option is to track the actions with an int, once int = 2 inside the if playerchosenaction == -1, reset to 0
+    }
+
+    private IEnumerator ProcessTurn()
+    {
+        yield return BattleMessageLog.Instance.ShowMessage($"A {enemy.ENTNAME} appeared!");
+
+        // If the player is NOT first, allow them to choose an action for the turn still
+        yield return StartCoroutine(PlayerChoosing());  // Without this, the battle falls apart. Enemy moves first before player can take turn.
+        Debug.Log(turnQueue.Peek()); // This lets us see the turn queue
+
+        while (battleActive)
+        {
+            Entity actor = turnQueue.Dequeue();
+            Debug.Log(turnQueue.Peek());
+            if (playerChosenAction == -1 && actionStep == 2)       // Before every turn after T1, the player must choose their action
+            {
+                actionStep = 0;
+                yield return StartCoroutine(PlayerChoosing());
+            }
+
+            if (actor == player)
+            {
+                yield return StartCoroutine(PlayerTurn(playerChosenAction));    // If the actor this current turn is the player, do player choice
+                playerChosenAction = -1;                                        // Reset the player's chosen action for reselection above
+            }
+            else
+            {
+                yield return StartCoroutine(EnemyTurn());                       // If not the player, then actor is the enemy. Do enemy turn.
+            }
+
+            // Requeue the actor if alive
+            if (actor.HP > 0)
+                turnQueue.Enqueue(actor);
+
+            actionStep++;   // Count up 1, from 0. Will go to 1 after first action, 2 after second action, which forces player choose
+
+            Debug.Log(turnQueue.Peek());
+
+            // Check win/loss
+            if (player.HP <= 0 || enemy.HP <= 0)
+            {
+                EndBattle();
+                yield break;
+            }
+
+            // Optional small delay so messages don't flood
+            yield return null;
+        }
+        yield return BattleMessageLog.Instance.ShowMessage("");
     }
 
     private void EndBattle()
@@ -76,29 +163,26 @@ public class BattleManager : MonoBehaviour
         Debug.Log("Battle has ended!");
         battleActive = false;
 
-        if (player.HP <= 0)
+        if (player.HP <= 0)         // Player has died
         {
             Debug.Log(enemy.ENTNAME + " won the battle!");
-            // Player dies
-            // Respawn at church and /2 gold
-            player.HalvePlayerGold();
-            BattleUI.instance.Hide();
-            Destroy(enemy.gameObject);
+            player.HalvePlayerGold();                           // Halve the player's gold
+            BattleUI.instance.Hide();                           // Hide the battle UI
+            Destroy(enemy.gameObject);                          // Destroy the enemy prefab
             //fade to black and respawn
             return;
         }
-        else if (enemy.HP <= 0)
+        else if (enemy.HP <= 0)     // Enemy has died
         {
             Debug.Log(player.ENTNAME + " won the battle!");
-            // Enemy dies
-            player.AddXP(enemy.XP);
-            player.AddGold(enemy.GOLD);
+            player.AddXP(enemy.XP);                             // Player class method that adds XP to their current XP
+            player.AddGold(enemy.GOLD);                         // Same thing but for Gold
 
-            GetStat[] statUpdaters = FindObjectsByType<GetStat>(FindObjectsSortMode.None);
-            foreach (GetStat stat in statUpdaters)
+            GetStat[] statUpdaters = FindObjectsByType<GetStat>(FindObjectsSortMode.None);  // Update the battle stats and pause menu stats
+            foreach (GetStat stat in statUpdaters)                                          // by looping through everything that has the class
                 stat.GrabTheStats();
 
-            if (bossBattle && currentBossTrigger != null)
+            if (bossBattle && currentBossTrigger != null)                                   // If it was a boss, run the boss defeated method
                 currentBossTrigger.OnBossDefeated();
 
             CleanupBattleUI();
@@ -109,46 +193,10 @@ public class BattleManager : MonoBehaviour
             Debug.Log("Somebody ran away!");
             CleanupBattleUI();
         }
-        
+
         bossBattle = false;
         currentBossTrigger = null;
         currentBossFlag = "";
-    }
-
-    public void InstantiateBossBattle(GameObject boss, BossTrigger trigger, string bossFlagName = "")
-    {
-        SetupBattle(boss, true, trigger, bossFlagName);
-    }
-
-    private void SetupBattle(GameObject enemyPrefab, bool isBoss, BossTrigger trigger, string bossFlagName)
-    {
-        GameObject newEnemyObj = Instantiate(enemyPrefab);
-
-        player = PlayerState.instance;
-        enemy = newEnemyObj.GetComponent<Enemy>();
-        enemyDisplay.texture = enemy.EnemySprite;
-
-        enemy.InitializeEnemySpawn();
-
-        BattleUI.instance.Show();
-        DetermineTurnOrder();
-
-        battleActive = true;
-
-        bossBattle = isBoss;
-        currentBossTrigger = trigger;
-        currentBossFlag = bossFlagName;
-
-        // Disable player movement
-        PlayerMovement.instance.SetCanMove(false);
-        UIStateController.CurrentState = UIState.Battle;
-
-        overworldMusic = FindFirstObjectByType<SceneStartup>().GetComponent<AudioSource>().clip;
-        AudioSource battleAudioSource = FindFirstObjectByType<SceneStartup>().GetComponent<AudioSource>();
-        battleAudioSource.clip = battleMusic;
-        battleAudioSource.Play();
-
-        StartCoroutine(ProcessTurn());
     }
 
     private void CleanupBattleUI()
@@ -163,76 +211,12 @@ public class BattleManager : MonoBehaviour
         battleAudioSource.clip = overworldMusic; battleAudioSource.Play();
     }
 
-    private void DetermineTurnOrder()
-    {
-        turnQueue.Clear();
-
-        if (player.AGI >= enemy.AGI)
-        {
-            turnQueue.Enqueue(player);
-            turnQueue.Enqueue(enemy);
-        }
-        else
-        {
-            turnQueue.Enqueue(enemy);
-            turnQueue.Enqueue(player);
-        }
-    }
-
-    private IEnumerator ProcessTurn()
-    {
-        yield return BattleMessageLog.Instance.ShowMessage($"A {enemy.ENTNAME} appeared!");
-
-        // If the player is NOT first, allow them to choose an action for the turn still
-
-        yield return StartCoroutine(PlayerChoosing());  // Without this, the battle falls apart. Enemy moves first before player can take turn.
-
-        while (battleActive)
-        {
-            Entity actor = turnQueue.Dequeue();
-
-            if (playerChosenAction == -1)       // Before every turn after T1, the player must choose their action
-            {
-                yield return StartCoroutine(PlayerChoosing());
-            }
-
-            if (actor == player)
-            {
-                // Ask for input EACH time the player gets a turn
-                
-                yield return StartCoroutine(PlayerTurn(playerChosenAction));
-                playerChosenAction = -1;
-            }
-            else
-            {
-                yield return StartCoroutine(EnemyTurn());
-            }
-
-            // Requeue the actor if alive
-            if (actor.HP > 0)
-                turnQueue.Enqueue(actor);
-
-            // Check win/loss
-            if (player.HP <= 0 || enemy.HP <= 0)
-            {
-                EndBattle();
-                yield break;
-            }
-
-            // Optional small delay so messages don't flood
-            yield return null;
-        }
-
-
-
-        yield return BattleMessageLog.Instance.ShowMessage("");
-    }
-
     private IEnumerator PlayerChoosing()
     {
         // Ensure UI shows current stats and selection starts at first button
         BattleUI.instance.UpdateStats();
         BattleUI.instance.ResetSelectionToFirst();
+        yield return BattleMessageLog.Instance.ShowMessage("Select your action.");
 
         playerChosenAction = -1;
 
@@ -241,7 +225,7 @@ public class BattleManager : MonoBehaviour
         {
             playerChosenAction = BattleUI.instance.HandleMenuInput(); // returns -1 while choosing, or 0/1 when confirmed
             
-            if (playerChosenAction == 1)
+            if (playerChosenAction == 1)                              // Override for running away, has to happen before any actions
             {
                 yield return StartCoroutine(AttemptFlee());
                 yield break;
@@ -253,8 +237,6 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator PlayerTurn(int action)
     {
-        
-
         // Execute the chosen action
         switch (action)
         {
@@ -267,8 +249,6 @@ public class BattleManager : MonoBehaviour
                 StartCoroutine(FlashUIRawImage(enemyDisplay));
                 yield return BattleMessageLog.Instance.ShowMessage($"{enemy.ENTNAME} takes {dmg} damage!");
                 BattleUI.instance.UpdateStats();
-                // Optional: small delay for readability/animation
-                //yield return new WaitForSeconds(0.4f);
                 yield return BattleMessageLog.Instance.ShowMessage(""); // Clear the action message
                 break;
 
@@ -306,6 +286,13 @@ public class BattleManager : MonoBehaviour
     {
         float chance = Mathf.Clamp01((float)player.AGI / (player.AGI + enemy.AGI));
 
+        if (bossBattle)
+        {
+            Debug.Log("Player can't escape!");
+            yield return BattleMessageLog.Instance.ShowMessage($"You can't escape!");
+            yield break;
+        }
+
         if (Random.value <= chance)
         {
             yield return BattleMessageLog.Instance.ShowMessage("You fled successfully!");
@@ -317,16 +304,12 @@ public class BattleManager : MonoBehaviour
         {
             yield return BattleMessageLog.Instance.ShowMessage("Flee failed!");
             // Important: set an action so the turn system continues
-            playerChosenAction = -1;
+            playerChosenAction = 3;
         }
     }
 
     private IEnumerator FlashUIRawImage(RawImage img)
     {
-        // Ensure the image has its own material instance
-        //if (img.material == null || img.material.name.EndsWith("(Instance)") == false)
-        //    img.material = new Material(img.material);
-
         Material mat = img.material;
 
         // Flash white
