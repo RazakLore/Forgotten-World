@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class MenuManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MenuManager : MonoBehaviour
     private bool pauseMenuPanelActive = false;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMPro.TMP_Text dialogueText;
+    private Coroutine typeCoroutine;
 
     private void Awake()
     {
@@ -38,20 +40,38 @@ public class MenuManager : MonoBehaviour
         pauseMenuPanel.SetActive(opening);
         pauseMenuPanelActive = opening;
 
-        //UIStateController.CurrentState = opening ? UIState.Paused : UIState.Gameplay;   // Doesnt really do anything
+        UIStateController.CurrentState = opening ? UIState.Paused : UIState.Gameplay;   // Doesnt really do anything
     }
 
     public void ShowDialogue(string text)
     {
         dialoguePanel.SetActive(true);
         pauseMenuPanel.SetActive(false);
-        dialogueText.text = text;
+
+
+        if (typeCoroutine != null)
+            StopCoroutine(typeCoroutine);
+
+        typeCoroutine = StartCoroutine(TypeText(text));
     }
 
     public void HideDialogue()
     {
         dialoguePanel.SetActive(false);
-        pauseMenuPanel.SetActive(true);
+        //pauseMenuPanel.SetActive(true);
         dialogueText.text = "";
+    }
+
+    private IEnumerator TypeText(string fullText)
+    {
+        dialogueText.text = "";
+
+        foreach (char c in fullText)
+        {
+            dialogueText.text += c;
+            yield return new WaitForSeconds(SettingsManager.Instance.messageSpeed);
+        }
+
+
     }
 }

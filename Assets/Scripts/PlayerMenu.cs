@@ -101,6 +101,11 @@ public class PlayerMenu : MonoBehaviour
 
     private void UpdateArrow()
     {
+        options[currentSelection].Select();
+        //for (int i = 0; i < options.Length; i++)
+            //options[i].GetComponent<Image>().color = Color.black;
+
+        //options[currentSelection].GetComponent<Image>().color = new Color(1, 1, 0.6f);
         // Move arrow next to the currently selected option
         //arrow.position = new Vector3(
         //    arrow.position.x,

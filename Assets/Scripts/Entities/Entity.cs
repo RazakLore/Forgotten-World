@@ -78,6 +78,11 @@ public abstract class Entity : MonoBehaviour
         currentHp = Mathf.Min(maxHp, currentHp + amount);
     }
 
+    public void RestoreMP(int amount)
+    {
+        currentMp = Mathf.Min(maxMp, currentMp + amount);
+    }
+
     public void ApplyBuff(string stat, int amount, int turns)
     {
         // Figure out which stat is being buffed, figure out if 1 or 2 stages are being buffed (15 or 30%)

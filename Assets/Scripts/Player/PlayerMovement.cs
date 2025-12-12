@@ -43,7 +43,8 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("MoveX", movement.x);
         anim.SetFloat("MoveY", movement.y);
 
-        randomEncounter.HandleEncounterTimer(movement.x, movement.y);
+        if (randomEncounter.HasEncounterTable)
+            randomEncounter.HandleEncounterTimer(movement.x, movement.y);
     }
 
     private void FixedUpdate()

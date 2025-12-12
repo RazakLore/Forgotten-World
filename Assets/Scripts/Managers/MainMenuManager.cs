@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     [Header("Scene Names")]
-    public string firstSceneName = "Overworld"; // Scene to load on New Game
+    [SerializeField] private string firstSceneName = ""; // Scene to load on New Game
 
     public void NewGame()
     {

@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class PlayerState : Entity
 {
     public static PlayerState instance;
-    public List<Item> inventory = new List<Item>();
-    private int maxInventorySlots = 20;
+    //public List<Item> inventory = new List<Item>();
+    //private int maxInventorySlots = 20;
 
     private int maxLvl, maxLvlStatValue;
 
@@ -86,18 +87,38 @@ public class PlayerState : Entity
         currentGold += amount;
     }
 
-    public bool AddItem(Item newItem)
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+    private void Update()
     {
-        if (inventory.Count >= 20)
-            return false; // ui message saying bag full
+        // PRESS T ? Heal 30 HP using a real consumable if possible
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            bool usedRealItem = false;
 
-        inventory.Add(newItem);
-        return true;
-    }
+            foreach (var slot in Inventory.Instance.Slots)
+            {
+                // slot can be null (empty slots in your list)
+                if (slot != null &&
+                    slot.item != null &&
+                    slot.item.IsConsumable() &&           // ? ? ? MUST HAVE () 
+                    slot.item.healAmount > 0)
+                {
+                    if (slot.item.UseOn(this))               // Calls Item.Use(PlayerState)
+                    {
+                        Inventory.Instance.RemoveItem(slot.item, 1);
+                        Debug.Log($"[TEST] Used {slot.item.itemName} ? +{slot.item.healAmount} HP");
+                        usedRealItem = true;
+                        break;
+                    }
+                }
+            }
 
-    public void RemoveItem(Item item)
-    {
-        if (inventory.Contains(item))
-            inventory.Remove(item);
+            if (!usedRealItem)
+            {
+                Heal(30);
+                Debug.Log("[TEST] No healing item found ? Direct +30 HP");
+            }
+        }
     }
+#endif
 }

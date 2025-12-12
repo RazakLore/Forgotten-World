@@ -5,6 +5,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private string[] dialogueLines;
     private int currentIndex = 0;
     private bool inDialogue = false;
+    [SerializeField] private bool isBoss = false;
 
     public void BeginDialogue()
     {
@@ -45,11 +46,17 @@ public class Dialogue : MonoBehaviour
 
     private void EndDialogue()
     {
-        inDialogue = false;
-        GetComponent<NPC>().TurnStaticOff();
-        MenuManager.instance.HideDialogue();
+        inDialogue = false;                     // You are no longer in dialogue
+        GetComponent<NPC>().TurnStaticOff();    // Only do this if they weren't originally static
+        MenuManager.instance.HideDialogue();    // Hide the UI
 
-        UIStateController.CurrentState = UIState.Gameplay;
+        if (isBoss)
+        {
+            GetComponent<BossTrigger>().OnPlayerEntered();
+            
+        }
+        else
+            UIStateController.CurrentState = UIState.Gameplay;
     }
     // This class should hopefully be simple. We fill in the dialogueLines in the inspector for each instance of an NPC, so its unique.
     // Now, we need to switch to the Dialogue UI enum we set up earlier so the player and the NPC can't move.

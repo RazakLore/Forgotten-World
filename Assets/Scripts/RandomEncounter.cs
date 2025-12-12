@@ -19,6 +19,7 @@ public class RandomEncounter : MonoBehaviour
     [SerializeField] private BattleManager battleManager;
     //[SerializeField] private GameObject battlePanel;
     [SerializeField] private EncounterTable encounterTable;
+    public bool HasEncounterTable => encounterTable != null;
 
     private bool canTrigger = true;
 
@@ -53,6 +54,10 @@ public class RandomEncounter : MonoBehaviour
         
         randomTimer = 0f;
         randomTimerThreshold = Random.Range(randomTimerRangeMin, randomTimerRangeMax);
+
+        if (encounterTable == null)
+            return;
+
         GameObject chosenPrefab = encounterTable.GetRandomEnemy();
 
         if (battleManager != null )

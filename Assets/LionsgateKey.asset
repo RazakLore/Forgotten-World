@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9cb9f9f5cfbd24ebb58820c2b9f0ba, type: 3}
+  m_Name: LionsgateKey
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemName: Lionsgate Key
+  description: 'The key to the Lionsgate, who knows how it works?
+
+'
+  itemType: 4
+  maxStack: 1
+  healAmount: 0
+  mpRestoreAmount: 0
+  attackBonus: 0
+  defenceBonus: 0
+  buyPrice: 0
+  sellPrice: 0

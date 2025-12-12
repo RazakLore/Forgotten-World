@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     {
         if (playerInstance == null)
         {
-            playerInstance = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+            playerInstance = Instantiate(playerPrefab, new Vector3(-1, 23), Quaternion.identity);
             playerInstance.tag = "Player";
         }
     }

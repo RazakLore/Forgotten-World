@@ -4,9 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneStartup : MonoBehaviour
 {
+    [Header("Temporary NPC")]
+    [SerializeField] private GameObject npcPrefab;
+    [SerializeField] private Transform npcSpawnPoint;
+    [SerializeField] private string gameFlagID;
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;  // When this object is enabled, so that the scene has been loaded first, subscribe to this method
+        HandleTempNPCSpawn();
     }
 
     private void OnDisable()
@@ -53,5 +59,19 @@ public class SceneStartup : MonoBehaviour
     IEnumerator DelayStart()
     {
         yield return new WaitForSeconds(1f);
+    }
+
+    private void HandleTempNPCSpawn()
+    {
+        // If no Temporary NPC is in this scene, ignore the rest of this function
+        if (npcPrefab == null || npcSpawnPoint == null || string.IsNullOrEmpty(gameFlagID))
+            return;
+
+        bool isDead = GameFlags.instance.IsBossDead(gameFlagID);
+
+        if (!isDead)
+        {
+            Instantiate(npcPrefab, npcSpawnPoint.position, npcSpawnPoint.rotation);
+        }
     }
 }

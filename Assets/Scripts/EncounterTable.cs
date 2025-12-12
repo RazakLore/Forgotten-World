@@ -7,6 +7,9 @@ public class EncounterTable : MonoBehaviour
 
     public GameObject GetRandomEnemy()
     {
+        if (enemyPrefabs == null || enemyPrefabs.Length == 0)
+            return null;
+
         return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
     }
 }

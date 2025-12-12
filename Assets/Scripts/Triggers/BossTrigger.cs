@@ -34,9 +34,9 @@ public class BossTrigger : MonoBehaviour
 
     private bool PlayerHasItem(Item item)
     {
-        foreach (var i in PlayerState.instance.inventory)
+        foreach (var i in Inventory.Instance.Slots)
         {
-            if (i.itemName == item.itemName)
+            if (i.item.itemName == item.itemName)
                 return true;
         }
         return false;
