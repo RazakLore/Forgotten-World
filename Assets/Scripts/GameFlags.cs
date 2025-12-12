@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameFlags : MonoBehaviour
 {
-    public static GameFlags instance = new GameFlags();
+    public static GameFlags instance;
 
     [System.Serializable]
     public class BossFlag

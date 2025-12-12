@@ -31,14 +31,25 @@ public class SceneStartup : MonoBehaviour
         GameObject player = GameObject.FindWithTag("Player");   // Get the player
         player.GetComponent<RandomEncounter>().GetEncounterTable();
 
-        GameObject spawnPoint = GameObject.FindGameObjectWithTag("DoorSpawnPoint");     // Debug just to grab the ONLY spawn point in the scene, change to search by ID and tag later?
-        Debug.Log(spawnPoint.name);
+        //GameObject spawnPoint = GameObject.FindGameObjectWithTag("DoorSpawnPoint");     // Debug just to grab the ONLY spawn point in the scene, change to search by ID and tag later?
+        GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("DoorSpawnPoint");
 
-        if (spawnPoint != null)
+        foreach (GameObject spawnPoint in spawnPoints)
         {
-            player.transform.position = spawnPoint.transform.position;  // Set the player's position to the spawn point's position
-            Debug.Log("NOT NULL");
+            if (spawnPoint.name == targetDoorID)
+            {
+                player.transform.position = spawnPoint.transform.position;
+                return;
+            }
         }
+
+        //Debug.Log(spawnPoint.name);
+
+        //if (spawnPoint != null)
+        //{
+        //    player.transform.position = spawnPoint.transform.position;  // Set the player's position to the spawn point's position
+        //    Debug.Log("NOT NULL");
+        //}
 
         // Find the targeted door
         //AreaConnector[] doors = FindObjectsByType<AreaConnector>(FindObjectsSortMode.None);

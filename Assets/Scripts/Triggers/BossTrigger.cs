@@ -6,8 +6,10 @@ public class BossTrigger : MonoBehaviour
     [SerializeField] private Enemy bossStats;
     [SerializeField] private string bossFlagName;
 
-    [Header("Optional Item Requirement")]
+    [Header("Optional Requirements")]
     [SerializeField] private Item requiredItem; // Null = No requirement
+    [SerializeField] private string requiredFlagName;
+    [SerializeField] private bool requiredFlagValue = true;
     private bool triggered = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +27,16 @@ public class BossTrigger : MonoBehaviour
         {
             Debug.Log("The player is missing " + requiredItem);
             return;
+        }
+
+        if (!string.IsNullOrWhiteSpace(requiredFlagName))
+        {
+            bool isFlagSet = GameFlags.instance.IsBossDead(requiredFlagName);
+            if (isFlagSet != requiredFlagValue)
+            {
+                Debug.Log("Required game flag " + requiredFlagName + " is not set to " + requiredFlagValue);
+                return;
+            }
         }
 
         triggered = true;

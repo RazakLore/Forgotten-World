@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   entityName: Wimpling
-  maxHp: 10
+  maxHp: 6
   currentHp: 0
   maxMp: 0
   currentMp: 0
@@ -53,6 +53,6 @@ MonoBehaviour:
   def: 1
   agi: 5
   lvl: 1
-  currentXp: 2
+  currentXp: 1
   currentGold: 1
   enemySprite: {fileID: 2800000, guid: 7b9b7b98adbbd8448a4bb4c15dedbef3, type: 3}

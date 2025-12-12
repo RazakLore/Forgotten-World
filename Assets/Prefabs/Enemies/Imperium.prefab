@@ -45,14 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   entityName: Imperium
-  maxHp: 10
+  maxHp: 16
   currentHp: 0
   maxMp: 0
   currentMp: 0
-  atk: 2
-  def: 1
+  atk: 4
+  def: 4
   agi: 5
   lvl: 1
-  currentXp: 2
-  currentGold: 1
+  currentXp: 5
+  currentGold: 3
   enemySprite: {fileID: 2800000, guid: ccd860e55a9113a40832c722439cf2db, type: 3}

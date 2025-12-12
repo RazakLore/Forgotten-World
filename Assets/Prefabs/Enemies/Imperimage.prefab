@@ -45,14 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   entityName: Imperimage
-  maxHp: 15
+  maxHp: 45
   currentHp: 0
   maxMp: 20
   currentMp: 0
-  atk: 1
-  def: 4
+  atk: 20
+  def: 8
   agi: 7
-  lvl: 2
-  currentXp: 6
-  currentGold: 9
+  lvl: 3
+  currentXp: 50
+  currentGold: 25
   enemySprite: {fileID: 2800000, guid: 1bc7c508ca7d73b46b25bf7ac410818d, type: 3}

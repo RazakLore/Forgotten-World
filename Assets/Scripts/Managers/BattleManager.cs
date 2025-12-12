@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -170,7 +171,12 @@ public class BattleManager : MonoBehaviour
             BattleUI.instance.Hide();                           // Hide the battle UI
             Destroy(enemy.gameObject);                          // Destroy the enemy prefab
             //fade to black and respawn
-            return;
+
+            //Temporary measure to make sure death has consequence in the upload
+            if (!Application.isEditor)
+                Application.Quit();
+
+                return;
         }
         else if (enemy.HP <= 0)     // Enemy has died
         {
@@ -264,6 +270,17 @@ public class BattleManager : MonoBehaviour
                 yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} runs away!");
                 // Implement flee chance if you want; for now just end battle as before
                 EndBattle();
+                yield break;
+
+            case 2: //Heal
+                yield return BattleMessageLog.Instance.ShowMessage($"{player.ENTNAME} heals!");
+                if (player.MP < 3)
+                {
+                    yield return BattleMessageLog.Instance.ShowMessage($"Not enough MP!");
+                }
+                else
+                    player.Heal(Random.Range(15, 20));
+                BattleUI.instance.UpdateStats();
                 yield break;
         }
     }

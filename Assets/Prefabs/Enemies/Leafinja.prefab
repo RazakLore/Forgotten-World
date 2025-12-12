@@ -53,6 +53,6 @@ MonoBehaviour:
   def: 7
   agi: 7
   lvl: 1
-  currentXp: 1
+  currentXp: 2
   currentGold: 2
   enemySprite: {fileID: 2800000, guid: ac71b8ee6b8323c42abbf50c17a073dd, type: 3}

@@ -45,13 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   entityName: Groblin
-  maxHp: 10
+  maxHp: 11
   currentHp: 0
   maxMp: 0
   currentMp: 0
   atk: 2
-  def: 1
-  agi: 5
+  def: 2
+  agi: 4
   lvl: 1
   currentXp: 2
   currentGold: 1

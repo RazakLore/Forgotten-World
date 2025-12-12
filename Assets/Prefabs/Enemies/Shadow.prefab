@@ -45,13 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   entityName: Shadow
-  maxHp: 12
+  maxHp: 20
   currentHp: 0
   maxMp: 3
   currentMp: 0
   atk: 3
-  def: 2
-  agi: 5
+  def: 4
+  agi: 6
   lvl: 2
   currentXp: 3
   currentGold: 5

@@ -4903,7 +4903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71dd4ede1d3195544a57cb6b770e1348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  moveSpeed: 5
+  moveSpeed: 3
 --- !u!114 &4713246586218753819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4946,7 +4946,6 @@ MonoBehaviour:
   lvl: 1
   currentXp: 0
   currentGold: 0
-  inventory: []
 --- !u!50 &6823334968357029577
 Rigidbody2D:
   serializedVersion: 5
