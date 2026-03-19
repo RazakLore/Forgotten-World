@@ -45,7 +45,7 @@ public class Item : ScriptableObject
 
         if (healAmount > 0)
         {
-            target.Heal(healAmount);
+            target.Heal(healAmount, 0);
             used = true;
         }
 

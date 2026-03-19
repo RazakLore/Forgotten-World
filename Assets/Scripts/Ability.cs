@@ -29,7 +29,7 @@ public class HealAbility : Ability
 
     public override void UseAbility(Entity user, Entity target)
     {
-        target.Heal(healAmount);
+        target.Heal(healAmount, 3);
     }
 }
 

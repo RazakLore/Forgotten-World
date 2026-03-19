@@ -115,7 +115,7 @@ public class PlayerState : Entity
 
             if (!usedRealItem)
             {
-                Heal(30);
+                Heal(30, 0);
                 Debug.Log("[TEST] No healing item found ? Direct +30 HP");
             }
         }

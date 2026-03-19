@@ -191,6 +191,9 @@ public class BattleManager : MonoBehaviour
             if (bossBattle && currentBossTrigger != null)                                   // If it was a boss, run the boss defeated method
                 currentBossTrigger.OnBossDefeated();
 
+            //yield return BattleMessageLog.Instance.ShowMessage($"{enemy.ENTNAME} dropped " + enemy.XP + " XP!");
+            //yield return BattleMessageLog.Instance.ShowMessage($"{enemy.ENTNAME} dropped " + enemy.GOLD + " gold!");
+
             CleanupBattleUI();
             return;
         }
@@ -279,7 +282,7 @@ public class BattleManager : MonoBehaviour
                     yield return BattleMessageLog.Instance.ShowMessage($"Not enough MP!");
                 }
                 else
-                    player.Heal(Random.Range(15, 20));
+                    player.Heal(Random.Range(15, 20), 3);
                 BattleUI.instance.UpdateStats();
                 yield break;
         }

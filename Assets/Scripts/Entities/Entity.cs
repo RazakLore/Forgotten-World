@@ -73,9 +73,10 @@ public abstract class Entity : MonoBehaviour
         currentHp = Mathf.Max(0, currentHp - damage);
     }
 
-    public void Heal(int amount)
+    public void Heal(int amount, int mpToRemove)
     {
         currentHp = Mathf.Min(maxHp, currentHp + amount);
+        currentMp -= mpToRemove;
     }
 
     public void RestoreMP(int amount)
